@@ -1,5 +1,8 @@
 # JetBrains IntelliJ
-.idea
+.idea/
+
+# Visual Studio Code
+.vscode/
 
 # macOS
 .DS_Store
