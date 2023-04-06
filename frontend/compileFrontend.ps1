@@ -15,4 +15,4 @@ docker build -t planty-frontend .
 docker run -it --rm --name planty-frontend-compiler -v ${WD}:/app planty-frontend yarn install
 
 # Run frontend inside container
-docker run -it --rm --name planty-frontend-compiler -v ${WD}:/app -p 4200:4200 planty-frontend ng build
+docker run -it --rm --name planty-frontend-compiler -v ${WD}:/app planty-frontend ng build

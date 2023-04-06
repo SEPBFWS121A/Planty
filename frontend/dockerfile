@@ -16,4 +16,4 @@ WORKDIR /app
 EXPOSE 4200
 
 # If no other command is specified, print a message and exit
-CMD echo Your Angular Container is ready. Please specify a command to run in it. Exiting container.
+CMD echo Your Frontend Container is working! Please specify a command to run in it. Exiting container.

@@ -1,0 +1,22 @@
+# Base build on latest Alpine Linux image
+FROM alpine:latest
+
+# Install OpenJDK 17 and Maven
+# The --no-cache option prevents the package index from being cached locally,
+# which reduces the size of the image even further.
+RUN apk add --no-cache openjdk17 maven
+
+# Disable IPv6 as described in
+# https://stackoverflow.com/a/71105758
+# and
+# https://www.linuxquestions.org/questions/linux-networking-3/disable-ipv6-in-alpine-linux-925858/
+RUN echo blacklist ipv6 >> /etc/modprobe.d/blacklist.conf && echo ipv6 >> /etc/modules && echo net.ipv6.conf.default.disable_ipv6 = 1 >> /etc/sysctl.conf && echo net.ipv6.conf.all.disable_ipv6 = 1 >> /etc/sysctl.conf
+
+# Set /app as working directory
+WORKDIR /app
+
+# Expose port used for Quarkus development server
+EXPOSE 8080
+
+# If no other command is specified, print a message and exit
+CMD echo Your Backend Container is working! Please specify a command to run in it. Exiting container.
