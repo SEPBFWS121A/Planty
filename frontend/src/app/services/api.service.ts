@@ -21,6 +21,14 @@ export class ApiService {
     return this.http.get('http://localhost:3000/plant' + id);
   }
 
+  sensorGet() {
+    return this.http.get('http://localhost:3000/sensor');
+  }
+
+  plantTypeGet() {
+    return this.http.get('http://localhost:3000/plantType');
+  }
+
   plantGet() {
     return this.http.get('http://localhost:3000/plant');
   }

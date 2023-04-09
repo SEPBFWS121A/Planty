@@ -1,0 +1,19 @@
+.full-width-table {
+    width: 100%;
+  }
+  .mat-column-id {
+    width: 10% !important;
+  }
+  .mat-column-name {
+    width: 20% !important;
+  }
+  .mat-column-description {
+    width: 50% !important;
+    padding-right: 15px;
+  }
+  .mat-column-category {
+    width: 10% !important;
+  }
+  .mat-column-sensor {
+    width: 10% !important;
+  }

@@ -1,0 +1,26 @@
+.full-width-table {
+    width: 100%;
+  }
+  .mat-column-id {
+    width: 10% !important;
+  }
+  .mat-column-name {
+    width: 10% !important;
+  }
+  .mat-column-description {
+    width: 40% !important;
+    padding-right: 15px;
+  }
+  .mat-column-humidityScalingFrom {
+    width: 10% !important;
+  }
+  .mat-column-humidityScalingTo {
+    width: 10% !important;
+  }
+  .mat-column-lastCalibration {
+    width: 10% !important;
+    padding-right: 15px;
+  }
+  .mat-column-sleepTimeout {
+    width: 10% !important;
+  }

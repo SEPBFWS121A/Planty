@@ -1,0 +1,16 @@
+.full-width-table {
+    width: 100%;
+  }
+  .mat-column-id {
+    width: 8% !important;
+  }
+  .mat-column-name {
+    width: 12% !important;
+  }
+  .mat-column-description {
+    width: 60% !important;
+    padding-right: 15px;
+  }
+  .mat-column-minHumidityLevel {
+    width: 20% !important;
+  }

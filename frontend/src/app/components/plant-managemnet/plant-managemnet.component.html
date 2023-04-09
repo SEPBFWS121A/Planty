@@ -1,11 +1,33 @@
 <div class="grid-cols-1">
-  <app-mangement-form
-      [visibility]="'visible'"
-      [menuetype]="'Plant'"
-    >
+  <app-mangement-form [visibility]="'visible'" [menuetype]="'Plant'">
   </app-mangement-form>
-  <app-management-table
-    [endPoint]="'users/Kitt3120/repos'"
-  >
-  </app-management-table>
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>Description</th>
+      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef>Category</th>
+      <td mat-cell *matCellDef="let element">{{ element.plantTypeId }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sensor">
+      <th mat-header-cell *matHeaderCellDef>Sensor</th>
+      <td mat-cell *matCellDef="let element">{{ element.sensorId }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </div>

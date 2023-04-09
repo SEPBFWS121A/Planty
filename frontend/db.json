@@ -26,7 +26,8 @@
       "sensorId": 1,
       "roomId": 1
     }
-  ], "plant8": [
+  ],
+  "plant8": [
     {
       "id": 8,
       "name": "Cassandra",
@@ -34,6 +35,40 @@
       "plantTypeId": 2,
       "sensorId": 2,
       "roomId": 2
+    }
+  ],
+  "plantType": [
+    {
+      "id": 3,
+      "name": "Sunflower",
+      "description": "Draws energy during the day, but loses energy at night. +5 Energy/minute at day, -3.25 Energy/minute at night.",
+      "minHumidityLevel": 20
+    },
+    {
+      "id": 4,
+      "name": "Tulip",
+      "description": "A family of flowers that originated from Turkey.",
+      "minHumidityLevel": 50
+    }
+  ],
+  "sensor": [
+    {
+      "id": 5,
+      "name": "Epic Sensor",
+      "description": "The most accurate of them all. This is the main character.",
+      "humidityScalingFrom": 0,
+      "humidityScalingTo": 100,
+      "lastCalibration": "2023-04-09T18:28:02.201+00:00",
+      "sleepTimeout": 60
+    },
+    {
+      "id": 6,
+      "name": "Crippled Sensor",
+      "description": "This one has cheap parts built into it.",
+      "humidityScalingFrom": 32,
+      "humidityScalingTo": 65,
+      "lastCalibration": "2023-04-09T18:28:02.213+00:00",
+      "sleepTimeout": 60
     }
   ],
   "moistureRecordbyPlant7": [

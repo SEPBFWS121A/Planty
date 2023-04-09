@@ -1,11 +1,28 @@
 <div class="grid-cols-1">
-  <app-mangement-form
-    [visibility]="'invisible'"
-    [menuetype]="'Category'"
-  >
+  <app-mangement-form [visibility]="'invisible'" [menuetype]="'Category'">
   </app-mangement-form>
-  <app-management-table
-    [endPoint]="'users/cryingshadow/repos'"
-  >
-  </app-management-table>
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>Description</th>
+      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="minHumidityLevel">
+      <th mat-header-cell *matHeaderCellDef>Min Humidity Level</th>
+      <td mat-cell *matCellDef="let element">{{ element.minHumidityLevel }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </div>
