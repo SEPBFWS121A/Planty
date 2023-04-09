@@ -10,6 +10,7 @@ import { DefaultService } from 'src/assets/ts-api-client';
 })
 export class PieChartComponent implements OnInit {
   @Input() plantID: string = '';
+  plant: any;
   moistureData: number = NaN;
   plantData: any;
   plantName: string = '';
@@ -20,7 +21,20 @@ export class PieChartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.defaultService
+    // this.defaultService
+    //   .moistureRecordByPlantPlantIdGet(this.plantID)
+    //   .subscribe((result) => {
+    //     this.plantData = result;
+    //     if (this.plantData != null) {
+    //       this.moistureData =
+    //         this.plantData[this.plantData.length - 1].humidityLevel;
+    //       this.renderChart();
+    //     }
+    //   });
+    // this.defaultService.plantPlantIdGet(this.plantID).subscribe((result) => {
+    //   this.plantName = result.name!;
+    // });
+    this.apiService
       .moistureRecordByPlantPlantIdGet(this.plantID)
       .subscribe((result) => {
         this.plantData = result;
@@ -30,8 +44,9 @@ export class PieChartComponent implements OnInit {
           this.renderChart();
         }
       });
-    this.defaultService.plantPlantIdGet(this.plantID).subscribe((result) => {
-      this.plantName = result.name!;
+    this.apiService.plantPlantIdGet(this.plantID).subscribe((result) => {
+      this.plant = result;
+      this.plantName = this.plant[0].name;
     });
   }
 
@@ -43,7 +58,7 @@ export class PieChartComponent implements OnInit {
         datasets: [
           {
             label: 'Percent',
-            data: [this.moistureData * 10, 100 - this.moistureData * 10],
+            data: [this.moistureData, 100 - this.moistureData],
             backgroundColor: ['rgb(54, 162, 235)', 'rgb(211,211,211)'],
             hoverOffset: 4,
           },

@@ -12,6 +12,7 @@ Chart.register(...registerables);
 export class LineChartComponent implements OnInit {
   @Input() plantID: string = '';
   plantData: any;
+  plant: any;
   lableData: any[] = [];
   moistureData: any[] = [];
   plantName: string = '';
@@ -22,20 +23,43 @@ export class LineChartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.defaultService
+    // this.defaultService
+    //   .moistureRecordByPlantPlantIdGet(this.plantID)
+    //   .subscribe((result) => {
+    //     this.plantData = result;
+    //     if (this.plantData != null) {
+    //       this.plantName = this.plantID;
+    //       for (let i = 0; i < this.plantData.length; i++) {
+    //         this.lableData.push(this.plantData[i].timestamp);
+    //         this.moistureData.push(this.plantData[i].humidityLevel);
+    //       }
+    //       this.renderChart(this.lableData, this.moistureData);
+    //     }
+    //   });
+    // this.defaultService.plantPlantIdGet(this.plantID).subscribe((result) => {
+    //   this.plantName = result.name!;
+    // });
+    this.apiService
       .moistureRecordByPlantPlantIdGet(this.plantID)
       .subscribe((result) => {
         this.plantData = result;
         if (this.plantData != null) {
-          for (let i = 0; i < this.plantData.length; i++) {
-            this.lableData.push(this.plantData[i].timestamp);
+          for (
+            let i = this.plantData.length - 20;
+            i < this.plantData.length;
+            i++
+          ) {
+            //this.plantData.length
+            console.log();
+            this.lableData.push(this.plantData[i].timestamp.substring(0, 10));
             this.moistureData.push(this.plantData[i].humidityLevel);
           }
           this.renderChart(this.lableData, this.moistureData);
         }
       });
-    this.defaultService.plantPlantIdGet(this.plantID).subscribe((result) => {
-      this.plantName = result.name!;
+    this.apiService.plantPlantIdGet(this.plantID).subscribe((result) => {
+      this.plant = result;
+      this.plantName = this.plant[0].name;
     });
   }
 

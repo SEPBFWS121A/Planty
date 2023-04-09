@@ -1,15 +1,2779 @@
 {
-    "plant1Data": [
-      { "date": "14.03.2022", "moistureLevel": 3 },
-      { "date": "14.04.2022", "moistureLevel": 2 },
-      { "date": "04.05.2022", "moistureLevel": 1 },
-      { "date": "14.05.2022", "moistureLevel": 10 },
-      { "date": "14.06.2022", "moistureLevel": 7 }
-    ],
-
-    "plants": [
-      {"name": "Plant1"},
-      {"name": "Plant2"},
-      {"name": "Plant3"}
-    ]
+  "plant": [
+    {
+      "id": 7,
+      "name": "Betty",
+      "description": "Betty was your first sunflower. By the help of Planty, you managed to keep her alive ever since.",
+      "plantTypeId": 1,
+      "sensorId": 1,
+      "roomId": 1
+    },
+    {
+      "id": 8,
+      "name": "Cassandra",
+      "description": "Cassandra is a proud tulip.",
+      "plantTypeId": 2,
+      "sensorId": 2,
+      "roomId": 2
+    }
+  ],
+  "plant7": [
+    {
+      "id": 7,
+      "name": "Betty",
+      "description": "Betty was your first sunflower. By the help of Planty, you managed to keep her alive ever since.",
+      "plantTypeId": 1,
+      "sensorId": 1,
+      "roomId": 1
+    }
+  ], "plant8": [
+    {
+      "id": 8,
+      "name": "Cassandra",
+      "description": "Cassandra is a proud tulip.",
+      "plantTypeId": 2,
+      "sensorId": 2,
+      "roomId": 2
+    }
+  ],
+  "moistureRecordbyPlant7": [
+    {
+      "id": 9,
+      "timestamp": "2021-01-10T12:00:00.000+00:00",
+      "humidityLevel": 73,
+      "plantId": 7
+    },
+    {
+      "id": 11,
+      "timestamp": "2021-01-11T12:00:00.000+00:00",
+      "humidityLevel": 85,
+      "plantId": 7
+    },
+    {
+      "id": 13,
+      "timestamp": "2021-01-12T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 7
+    },
+    {
+      "id": 15,
+      "timestamp": "2021-01-13T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 7
+    },
+    {
+      "id": 17,
+      "timestamp": "2021-01-14T12:00:00.000+00:00",
+      "humidityLevel": 86,
+      "plantId": 7
+    },
+    {
+      "id": 19,
+      "timestamp": "2021-01-15T12:00:00.000+00:00",
+      "humidityLevel": 1,
+      "plantId": 7
+    },
+    {
+      "id": 21,
+      "timestamp": "2021-01-16T12:00:00.000+00:00",
+      "humidityLevel": 4,
+      "plantId": 7
+    },
+    {
+      "id": 23,
+      "timestamp": "2021-01-17T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 7
+    },
+    {
+      "id": 25,
+      "timestamp": "2021-01-18T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 27,
+      "timestamp": "2021-01-19T12:00:00.000+00:00",
+      "humidityLevel": 20,
+      "plantId": 7
+    },
+    {
+      "id": 29,
+      "timestamp": "2021-01-20T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 7
+    },
+    {
+      "id": 31,
+      "timestamp": "2021-01-21T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 7
+    },
+    {
+      "id": 33,
+      "timestamp": "2021-01-22T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 7
+    },
+    {
+      "id": 35,
+      "timestamp": "2021-01-23T12:00:00.000+00:00",
+      "humidityLevel": 63,
+      "plantId": 7
+    },
+    {
+      "id": 37,
+      "timestamp": "2021-01-24T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 7
+    },
+    {
+      "id": 39,
+      "timestamp": "2021-01-25T12:00:00.000+00:00",
+      "humidityLevel": 75,
+      "plantId": 7
+    },
+    {
+      "id": 41,
+      "timestamp": "2021-01-26T12:00:00.000+00:00",
+      "humidityLevel": 94,
+      "plantId": 7
+    },
+    {
+      "id": 43,
+      "timestamp": "2021-01-27T12:00:00.000+00:00",
+      "humidityLevel": 65,
+      "plantId": 7
+    },
+    {
+      "id": 45,
+      "timestamp": "2021-01-28T12:00:00.000+00:00",
+      "humidityLevel": 73,
+      "plantId": 7
+    },
+    {
+      "id": 47,
+      "timestamp": "2021-02-10T12:00:00.000+00:00",
+      "humidityLevel": 70,
+      "plantId": 7
+    },
+    {
+      "id": 49,
+      "timestamp": "2021-02-11T12:00:00.000+00:00",
+      "humidityLevel": 3,
+      "plantId": 7
+    },
+    {
+      "id": 51,
+      "timestamp": "2021-02-12T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 7
+    },
+    {
+      "id": 53,
+      "timestamp": "2021-02-13T12:00:00.000+00:00",
+      "humidityLevel": 86,
+      "plantId": 7
+    },
+    {
+      "id": 55,
+      "timestamp": "2021-02-14T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 57,
+      "timestamp": "2021-02-15T12:00:00.000+00:00",
+      "humidityLevel": 29,
+      "plantId": 7
+    },
+    {
+      "id": 59,
+      "timestamp": "2021-02-16T12:00:00.000+00:00",
+      "humidityLevel": 1,
+      "plantId": 7
+    },
+    {
+      "id": 61,
+      "timestamp": "2021-02-17T12:00:00.000+00:00",
+      "humidityLevel": 35,
+      "plantId": 7
+    },
+    {
+      "id": 63,
+      "timestamp": "2021-02-18T12:00:00.000+00:00",
+      "humidityLevel": 96,
+      "plantId": 7
+    },
+    {
+      "id": 65,
+      "timestamp": "2021-02-19T12:00:00.000+00:00",
+      "humidityLevel": 5,
+      "plantId": 7
+    },
+    {
+      "id": 67,
+      "timestamp": "2021-02-20T12:00:00.000+00:00",
+      "humidityLevel": 86,
+      "plantId": 7
+    },
+    {
+      "id": 69,
+      "timestamp": "2021-02-21T12:00:00.000+00:00",
+      "humidityLevel": 71,
+      "plantId": 7
+    },
+    {
+      "id": 71,
+      "timestamp": "2021-02-22T12:00:00.000+00:00",
+      "humidityLevel": 29,
+      "plantId": 7
+    },
+    {
+      "id": 73,
+      "timestamp": "2021-02-23T12:00:00.000+00:00",
+      "humidityLevel": 28,
+      "plantId": 7
+    },
+    {
+      "id": 75,
+      "timestamp": "2021-02-24T12:00:00.000+00:00",
+      "humidityLevel": 5,
+      "plantId": 7
+    },
+    {
+      "id": 77,
+      "timestamp": "2021-02-25T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 7
+    },
+    {
+      "id": 79,
+      "timestamp": "2021-02-26T12:00:00.000+00:00",
+      "humidityLevel": 90,
+      "plantId": 7
+    },
+    {
+      "id": 81,
+      "timestamp": "2021-02-27T12:00:00.000+00:00",
+      "humidityLevel": 27,
+      "plantId": 7
+    },
+    {
+      "id": 83,
+      "timestamp": "2021-02-28T12:00:00.000+00:00",
+      "humidityLevel": 14,
+      "plantId": 7
+    },
+    {
+      "id": 85,
+      "timestamp": "2021-03-10T12:00:00.000+00:00",
+      "humidityLevel": 82,
+      "plantId": 7
+    },
+    {
+      "id": 87,
+      "timestamp": "2021-03-11T12:00:00.000+00:00",
+      "humidityLevel": 22,
+      "plantId": 7
+    },
+    {
+      "id": 89,
+      "timestamp": "2021-03-12T12:00:00.000+00:00",
+      "humidityLevel": 29,
+      "plantId": 7
+    },
+    {
+      "id": 91,
+      "timestamp": "2021-03-13T12:00:00.000+00:00",
+      "humidityLevel": 17,
+      "plantId": 7
+    },
+    {
+      "id": 93,
+      "timestamp": "2021-03-14T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 7
+    },
+    {
+      "id": 95,
+      "timestamp": "2021-03-15T12:00:00.000+00:00",
+      "humidityLevel": 10,
+      "plantId": 7
+    },
+    {
+      "id": 97,
+      "timestamp": "2021-03-16T12:00:00.000+00:00",
+      "humidityLevel": 63,
+      "plantId": 7
+    },
+    {
+      "id": 99,
+      "timestamp": "2021-03-17T12:00:00.000+00:00",
+      "humidityLevel": 71,
+      "plantId": 7
+    },
+    {
+      "id": 101,
+      "timestamp": "2021-03-18T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 7
+    },
+    {
+      "id": 103,
+      "timestamp": "2021-03-19T12:00:00.000+00:00",
+      "humidityLevel": 3,
+      "plantId": 7
+    },
+    {
+      "id": 105,
+      "timestamp": "2021-03-20T12:00:00.000+00:00",
+      "humidityLevel": 5,
+      "plantId": 7
+    },
+    {
+      "id": 107,
+      "timestamp": "2021-03-21T12:00:00.000+00:00",
+      "humidityLevel": 84,
+      "plantId": 7
+    },
+    {
+      "id": 109,
+      "timestamp": "2021-03-22T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 7
+    },
+    {
+      "id": 111,
+      "timestamp": "2021-03-23T12:00:00.000+00:00",
+      "humidityLevel": 9,
+      "plantId": 7
+    },
+    {
+      "id": 113,
+      "timestamp": "2021-03-24T12:00:00.000+00:00",
+      "humidityLevel": 30,
+      "plantId": 7
+    },
+    {
+      "id": 115,
+      "timestamp": "2021-03-25T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 7
+    },
+    {
+      "id": 117,
+      "timestamp": "2021-03-26T12:00:00.000+00:00",
+      "humidityLevel": 91,
+      "plantId": 7
+    },
+    {
+      "id": 119,
+      "timestamp": "2021-03-27T12:00:00.000+00:00",
+      "humidityLevel": 67,
+      "plantId": 7
+    },
+    {
+      "id": 121,
+      "timestamp": "2021-03-28T12:00:00.000+00:00",
+      "humidityLevel": 86,
+      "plantId": 7
+    },
+    {
+      "id": 123,
+      "timestamp": "2021-04-10T12:00:00.000+00:00",
+      "humidityLevel": 81,
+      "plantId": 7
+    },
+    {
+      "id": 125,
+      "timestamp": "2021-04-11T12:00:00.000+00:00",
+      "humidityLevel": 99,
+      "plantId": 7
+    },
+    {
+      "id": 127,
+      "timestamp": "2021-04-12T12:00:00.000+00:00",
+      "humidityLevel": 80,
+      "plantId": 7
+    },
+    {
+      "id": 129,
+      "timestamp": "2021-04-13T12:00:00.000+00:00",
+      "humidityLevel": 63,
+      "plantId": 7
+    },
+    {
+      "id": 131,
+      "timestamp": "2021-04-14T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 7
+    },
+    {
+      "id": 133,
+      "timestamp": "2021-04-15T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 7
+    },
+    {
+      "id": 135,
+      "timestamp": "2021-04-16T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 137,
+      "timestamp": "2021-04-17T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 7
+    },
+    {
+      "id": 139,
+      "timestamp": "2021-04-18T12:00:00.000+00:00",
+      "humidityLevel": 7,
+      "plantId": 7
+    },
+    {
+      "id": 141,
+      "timestamp": "2021-04-19T12:00:00.000+00:00",
+      "humidityLevel": 79,
+      "plantId": 7
+    },
+    {
+      "id": 143,
+      "timestamp": "2021-04-20T12:00:00.000+00:00",
+      "humidityLevel": 18,
+      "plantId": 7
+    },
+    {
+      "id": 145,
+      "timestamp": "2021-04-21T12:00:00.000+00:00",
+      "humidityLevel": 2,
+      "plantId": 7
+    },
+    {
+      "id": 147,
+      "timestamp": "2021-04-22T12:00:00.000+00:00",
+      "humidityLevel": 17,
+      "plantId": 7
+    },
+    {
+      "id": 149,
+      "timestamp": "2021-04-23T12:00:00.000+00:00",
+      "humidityLevel": 84,
+      "plantId": 7
+    },
+    {
+      "id": 151,
+      "timestamp": "2021-04-24T12:00:00.000+00:00",
+      "humidityLevel": 21,
+      "plantId": 7
+    },
+    {
+      "id": 153,
+      "timestamp": "2021-04-25T12:00:00.000+00:00",
+      "humidityLevel": 79,
+      "plantId": 7
+    },
+    {
+      "id": 155,
+      "timestamp": "2021-04-26T12:00:00.000+00:00",
+      "humidityLevel": 65,
+      "plantId": 7
+    },
+    {
+      "id": 157,
+      "timestamp": "2021-04-27T12:00:00.000+00:00",
+      "humidityLevel": 34,
+      "plantId": 7
+    },
+    {
+      "id": 159,
+      "timestamp": "2021-04-28T12:00:00.000+00:00",
+      "humidityLevel": 72,
+      "plantId": 7
+    },
+    {
+      "id": 161,
+      "timestamp": "2021-05-10T12:00:00.000+00:00",
+      "humidityLevel": 78,
+      "plantId": 7
+    },
+    {
+      "id": 163,
+      "timestamp": "2021-05-11T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 7
+    },
+    {
+      "id": 165,
+      "timestamp": "2021-05-12T12:00:00.000+00:00",
+      "humidityLevel": 12,
+      "plantId": 7
+    },
+    {
+      "id": 167,
+      "timestamp": "2021-05-13T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 7
+    },
+    {
+      "id": 169,
+      "timestamp": "2021-05-14T12:00:00.000+00:00",
+      "humidityLevel": 81,
+      "plantId": 7
+    },
+    {
+      "id": 171,
+      "timestamp": "2021-05-15T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 7
+    },
+    {
+      "id": 173,
+      "timestamp": "2021-05-16T12:00:00.000+00:00",
+      "humidityLevel": 88,
+      "plantId": 7
+    },
+    {
+      "id": 175,
+      "timestamp": "2021-05-17T12:00:00.000+00:00",
+      "humidityLevel": 27,
+      "plantId": 7
+    },
+    {
+      "id": 177,
+      "timestamp": "2021-05-18T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 179,
+      "timestamp": "2021-05-19T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 7
+    },
+    {
+      "id": 181,
+      "timestamp": "2021-05-20T12:00:00.000+00:00",
+      "humidityLevel": 12,
+      "plantId": 7
+    },
+    {
+      "id": 183,
+      "timestamp": "2021-05-21T12:00:00.000+00:00",
+      "humidityLevel": 24,
+      "plantId": 7
+    },
+    {
+      "id": 185,
+      "timestamp": "2021-05-22T12:00:00.000+00:00",
+      "humidityLevel": 8,
+      "plantId": 7
+    },
+    {
+      "id": 187,
+      "timestamp": "2021-05-23T12:00:00.000+00:00",
+      "humidityLevel": 4,
+      "plantId": 7
+    },
+    {
+      "id": 189,
+      "timestamp": "2021-05-24T12:00:00.000+00:00",
+      "humidityLevel": 4,
+      "plantId": 7
+    },
+    {
+      "id": 191,
+      "timestamp": "2021-05-25T12:00:00.000+00:00",
+      "humidityLevel": 30,
+      "plantId": 7
+    },
+    {
+      "id": 193,
+      "timestamp": "2021-05-26T12:00:00.000+00:00",
+      "humidityLevel": 66,
+      "plantId": 7
+    },
+    {
+      "id": 195,
+      "timestamp": "2021-05-27T12:00:00.000+00:00",
+      "humidityLevel": 0,
+      "plantId": 7
+    },
+    {
+      "id": 197,
+      "timestamp": "2021-05-28T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 7
+    },
+    {
+      "id": 199,
+      "timestamp": "2021-06-10T12:00:00.000+00:00",
+      "humidityLevel": 89,
+      "plantId": 7
+    },
+    {
+      "id": 201,
+      "timestamp": "2021-06-11T12:00:00.000+00:00",
+      "humidityLevel": 47,
+      "plantId": 7
+    },
+    {
+      "id": 203,
+      "timestamp": "2021-06-12T12:00:00.000+00:00",
+      "humidityLevel": 44,
+      "plantId": 7
+    },
+    {
+      "id": 205,
+      "timestamp": "2021-06-13T12:00:00.000+00:00",
+      "humidityLevel": 13,
+      "plantId": 7
+    },
+    {
+      "id": 207,
+      "timestamp": "2021-06-14T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 7
+    },
+    {
+      "id": 209,
+      "timestamp": "2021-06-15T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 7
+    },
+    {
+      "id": 211,
+      "timestamp": "2021-06-16T12:00:00.000+00:00",
+      "humidityLevel": 92,
+      "plantId": 7
+    },
+    {
+      "id": 213,
+      "timestamp": "2021-06-17T12:00:00.000+00:00",
+      "humidityLevel": 20,
+      "plantId": 7
+    },
+    {
+      "id": 215,
+      "timestamp": "2021-06-18T12:00:00.000+00:00",
+      "humidityLevel": 27,
+      "plantId": 7
+    },
+    {
+      "id": 217,
+      "timestamp": "2021-06-19T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 219,
+      "timestamp": "2021-06-20T12:00:00.000+00:00",
+      "humidityLevel": 68,
+      "plantId": 7
+    },
+    {
+      "id": 221,
+      "timestamp": "2021-06-21T12:00:00.000+00:00",
+      "humidityLevel": 30,
+      "plantId": 7
+    },
+    {
+      "id": 223,
+      "timestamp": "2021-06-22T12:00:00.000+00:00",
+      "humidityLevel": 16,
+      "plantId": 7
+    },
+    {
+      "id": 225,
+      "timestamp": "2021-06-23T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 7
+    },
+    {
+      "id": 227,
+      "timestamp": "2021-06-24T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 7
+    },
+    {
+      "id": 229,
+      "timestamp": "2021-06-25T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 7
+    },
+    {
+      "id": 231,
+      "timestamp": "2021-06-26T12:00:00.000+00:00",
+      "humidityLevel": 21,
+      "plantId": 7
+    },
+    {
+      "id": 233,
+      "timestamp": "2021-06-27T12:00:00.000+00:00",
+      "humidityLevel": 25,
+      "plantId": 7
+    },
+    {
+      "id": 235,
+      "timestamp": "2021-06-28T12:00:00.000+00:00",
+      "humidityLevel": 22,
+      "plantId": 7
+    },
+    {
+      "id": 237,
+      "timestamp": "2021-07-10T12:00:00.000+00:00",
+      "humidityLevel": 77,
+      "plantId": 7
+    },
+    {
+      "id": 239,
+      "timestamp": "2021-07-11T12:00:00.000+00:00",
+      "humidityLevel": 87,
+      "plantId": 7
+    },
+    {
+      "id": 241,
+      "timestamp": "2021-07-12T12:00:00.000+00:00",
+      "humidityLevel": 21,
+      "plantId": 7
+    },
+    {
+      "id": 243,
+      "timestamp": "2021-07-13T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 7
+    },
+    {
+      "id": 245,
+      "timestamp": "2021-07-14T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 247,
+      "timestamp": "2021-07-15T12:00:00.000+00:00",
+      "humidityLevel": 27,
+      "plantId": 7
+    },
+    {
+      "id": 249,
+      "timestamp": "2021-07-16T12:00:00.000+00:00",
+      "humidityLevel": 22,
+      "plantId": 7
+    },
+    {
+      "id": 251,
+      "timestamp": "2021-07-17T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 7
+    },
+    {
+      "id": 253,
+      "timestamp": "2021-07-18T12:00:00.000+00:00",
+      "humidityLevel": 6,
+      "plantId": 7
+    },
+    {
+      "id": 255,
+      "timestamp": "2021-07-19T12:00:00.000+00:00",
+      "humidityLevel": 0,
+      "plantId": 7
+    },
+    {
+      "id": 257,
+      "timestamp": "2021-07-20T12:00:00.000+00:00",
+      "humidityLevel": 18,
+      "plantId": 7
+    },
+    {
+      "id": 259,
+      "timestamp": "2021-07-21T12:00:00.000+00:00",
+      "humidityLevel": 90,
+      "plantId": 7
+    },
+    {
+      "id": 261,
+      "timestamp": "2021-07-22T12:00:00.000+00:00",
+      "humidityLevel": 27,
+      "plantId": 7
+    },
+    {
+      "id": 263,
+      "timestamp": "2021-07-23T12:00:00.000+00:00",
+      "humidityLevel": 83,
+      "plantId": 7
+    },
+    {
+      "id": 265,
+      "timestamp": "2021-07-24T12:00:00.000+00:00",
+      "humidityLevel": 87,
+      "plantId": 7
+    },
+    {
+      "id": 267,
+      "timestamp": "2021-07-25T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 7
+    },
+    {
+      "id": 269,
+      "timestamp": "2021-07-26T12:00:00.000+00:00",
+      "humidityLevel": 12,
+      "plantId": 7
+    },
+    {
+      "id": 271,
+      "timestamp": "2021-07-27T12:00:00.000+00:00",
+      "humidityLevel": 20,
+      "plantId": 7
+    },
+    {
+      "id": 273,
+      "timestamp": "2021-07-28T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 7
+    },
+    {
+      "id": 275,
+      "timestamp": "2021-08-10T12:00:00.000+00:00",
+      "humidityLevel": 97,
+      "plantId": 7
+    },
+    {
+      "id": 277,
+      "timestamp": "2021-08-11T12:00:00.000+00:00",
+      "humidityLevel": 72,
+      "plantId": 7
+    },
+    {
+      "id": 279,
+      "timestamp": "2021-08-12T12:00:00.000+00:00",
+      "humidityLevel": 4,
+      "plantId": 7
+    },
+    {
+      "id": 281,
+      "timestamp": "2021-08-13T12:00:00.000+00:00",
+      "humidityLevel": 83,
+      "plantId": 7
+    },
+    {
+      "id": 283,
+      "timestamp": "2021-08-14T12:00:00.000+00:00",
+      "humidityLevel": 81,
+      "plantId": 7
+    },
+    {
+      "id": 285,
+      "timestamp": "2021-08-15T12:00:00.000+00:00",
+      "humidityLevel": 98,
+      "plantId": 7
+    },
+    {
+      "id": 287,
+      "timestamp": "2021-08-16T12:00:00.000+00:00",
+      "humidityLevel": 34,
+      "plantId": 7
+    },
+    {
+      "id": 289,
+      "timestamp": "2021-08-17T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 7
+    },
+    {
+      "id": 291,
+      "timestamp": "2021-08-18T12:00:00.000+00:00",
+      "humidityLevel": 73,
+      "plantId": 7
+    },
+    {
+      "id": 293,
+      "timestamp": "2021-08-19T12:00:00.000+00:00",
+      "humidityLevel": 70,
+      "plantId": 7
+    },
+    {
+      "id": 295,
+      "timestamp": "2021-08-20T12:00:00.000+00:00",
+      "humidityLevel": 73,
+      "plantId": 7
+    },
+    {
+      "id": 297,
+      "timestamp": "2021-08-21T12:00:00.000+00:00",
+      "humidityLevel": 94,
+      "plantId": 7
+    },
+    {
+      "id": 299,
+      "timestamp": "2021-08-22T12:00:00.000+00:00",
+      "humidityLevel": 13,
+      "plantId": 7
+    },
+    {
+      "id": 301,
+      "timestamp": "2021-08-23T12:00:00.000+00:00",
+      "humidityLevel": 18,
+      "plantId": 7
+    },
+    {
+      "id": 303,
+      "timestamp": "2021-08-24T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 7
+    },
+    {
+      "id": 305,
+      "timestamp": "2021-08-25T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 7
+    },
+    {
+      "id": 307,
+      "timestamp": "2021-08-26T12:00:00.000+00:00",
+      "humidityLevel": 82,
+      "plantId": 7
+    },
+    {
+      "id": 309,
+      "timestamp": "2021-08-27T12:00:00.000+00:00",
+      "humidityLevel": 76,
+      "plantId": 7
+    },
+    {
+      "id": 311,
+      "timestamp": "2021-08-28T12:00:00.000+00:00",
+      "humidityLevel": 17,
+      "plantId": 7
+    },
+    {
+      "id": 313,
+      "timestamp": "2021-09-10T12:00:00.000+00:00",
+      "humidityLevel": 37,
+      "plantId": 7
+    },
+    {
+      "id": 315,
+      "timestamp": "2021-09-11T12:00:00.000+00:00",
+      "humidityLevel": 83,
+      "plantId": 7
+    },
+    {
+      "id": 317,
+      "timestamp": "2021-09-12T12:00:00.000+00:00",
+      "humidityLevel": 9,
+      "plantId": 7
+    },
+    {
+      "id": 319,
+      "timestamp": "2021-09-13T12:00:00.000+00:00",
+      "humidityLevel": 88,
+      "plantId": 7
+    },
+    {
+      "id": 321,
+      "timestamp": "2021-09-14T12:00:00.000+00:00",
+      "humidityLevel": 7,
+      "plantId": 7
+    },
+    {
+      "id": 323,
+      "timestamp": "2021-09-15T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 7
+    },
+    {
+      "id": 325,
+      "timestamp": "2021-09-16T12:00:00.000+00:00",
+      "humidityLevel": 17,
+      "plantId": 7
+    },
+    {
+      "id": 327,
+      "timestamp": "2021-09-17T12:00:00.000+00:00",
+      "humidityLevel": 8,
+      "plantId": 7
+    },
+    {
+      "id": 329,
+      "timestamp": "2021-09-18T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 7
+    },
+    {
+      "id": 331,
+      "timestamp": "2021-09-19T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 7
+    },
+    {
+      "id": 333,
+      "timestamp": "2021-09-20T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 7
+    },
+    {
+      "id": 335,
+      "timestamp": "2021-09-21T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 7
+    },
+    {
+      "id": 337,
+      "timestamp": "2021-09-22T12:00:00.000+00:00",
+      "humidityLevel": 71,
+      "plantId": 7
+    },
+    {
+      "id": 339,
+      "timestamp": "2021-09-23T12:00:00.000+00:00",
+      "humidityLevel": 12,
+      "plantId": 7
+    },
+    {
+      "id": 341,
+      "timestamp": "2021-09-24T12:00:00.000+00:00",
+      "humidityLevel": 13,
+      "plantId": 7
+    },
+    {
+      "id": 343,
+      "timestamp": "2021-09-25T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 7
+    },
+    {
+      "id": 345,
+      "timestamp": "2021-09-26T12:00:00.000+00:00",
+      "humidityLevel": 91,
+      "plantId": 7
+    },
+    {
+      "id": 347,
+      "timestamp": "2021-09-27T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 7
+    },
+    {
+      "id": 349,
+      "timestamp": "2021-09-28T12:00:00.000+00:00",
+      "humidityLevel": 51,
+      "plantId": 7
+    },
+    {
+      "id": 351,
+      "timestamp": "2021-10-10T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 7
+    },
+    {
+      "id": 353,
+      "timestamp": "2021-10-11T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 7
+    },
+    {
+      "id": 355,
+      "timestamp": "2021-10-12T12:00:00.000+00:00",
+      "humidityLevel": 72,
+      "plantId": 7
+    },
+    {
+      "id": 357,
+      "timestamp": "2021-10-13T12:00:00.000+00:00",
+      "humidityLevel": 94,
+      "plantId": 7
+    },
+    {
+      "id": 359,
+      "timestamp": "2021-10-14T12:00:00.000+00:00",
+      "humidityLevel": 51,
+      "plantId": 7
+    },
+    {
+      "id": 361,
+      "timestamp": "2021-10-15T12:00:00.000+00:00",
+      "humidityLevel": 91,
+      "plantId": 7
+    },
+    {
+      "id": 363,
+      "timestamp": "2021-10-16T12:00:00.000+00:00",
+      "humidityLevel": 79,
+      "plantId": 7
+    },
+    {
+      "id": 365,
+      "timestamp": "2021-10-17T12:00:00.000+00:00",
+      "humidityLevel": 13,
+      "plantId": 7
+    },
+    {
+      "id": 367,
+      "timestamp": "2021-10-18T12:00:00.000+00:00",
+      "humidityLevel": 81,
+      "plantId": 7
+    },
+    {
+      "id": 369,
+      "timestamp": "2021-10-19T12:00:00.000+00:00",
+      "humidityLevel": 18,
+      "plantId": 7
+    },
+    {
+      "id": 371,
+      "timestamp": "2021-10-20T12:00:00.000+00:00",
+      "humidityLevel": 21,
+      "plantId": 7
+    },
+    {
+      "id": 373,
+      "timestamp": "2021-10-21T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 7
+    },
+    {
+      "id": 375,
+      "timestamp": "2021-10-22T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 7
+    },
+    {
+      "id": 377,
+      "timestamp": "2021-10-23T12:00:00.000+00:00",
+      "humidityLevel": 13,
+      "plantId": 7
+    },
+    {
+      "id": 379,
+      "timestamp": "2021-10-24T12:00:00.000+00:00",
+      "humidityLevel": 83,
+      "plantId": 7
+    },
+    {
+      "id": 381,
+      "timestamp": "2021-10-25T12:00:00.000+00:00",
+      "humidityLevel": 4,
+      "plantId": 7
+    },
+    {
+      "id": 383,
+      "timestamp": "2021-10-26T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 7
+    },
+    {
+      "id": 385,
+      "timestamp": "2021-10-27T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 7
+    },
+    {
+      "id": 387,
+      "timestamp": "2021-10-28T12:00:00.000+00:00",
+      "humidityLevel": 21,
+      "plantId": 7
+    },
+    {
+      "id": 389,
+      "timestamp": "2021-11-10T12:00:00.000+00:00",
+      "humidityLevel": 95,
+      "plantId": 7
+    },
+    {
+      "id": 391,
+      "timestamp": "2021-11-11T12:00:00.000+00:00",
+      "humidityLevel": 79,
+      "plantId": 7
+    },
+    {
+      "id": 393,
+      "timestamp": "2021-11-12T12:00:00.000+00:00",
+      "humidityLevel": 15,
+      "plantId": 7
+    },
+    {
+      "id": 395,
+      "timestamp": "2021-11-13T12:00:00.000+00:00",
+      "humidityLevel": 83,
+      "plantId": 7
+    },
+    {
+      "id": 397,
+      "timestamp": "2021-11-14T12:00:00.000+00:00",
+      "humidityLevel": 96,
+      "plantId": 7
+    },
+    {
+      "id": 399,
+      "timestamp": "2021-11-15T12:00:00.000+00:00",
+      "humidityLevel": 24,
+      "plantId": 7
+    },
+    {
+      "id": 401,
+      "timestamp": "2021-11-16T12:00:00.000+00:00",
+      "humidityLevel": 44,
+      "plantId": 7
+    },
+    {
+      "id": 403,
+      "timestamp": "2021-11-17T12:00:00.000+00:00",
+      "humidityLevel": 67,
+      "plantId": 7
+    },
+    {
+      "id": 405,
+      "timestamp": "2021-11-18T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 7
+    },
+    {
+      "id": 407,
+      "timestamp": "2021-11-19T12:00:00.000+00:00",
+      "humidityLevel": 98,
+      "plantId": 7
+    },
+    {
+      "id": 409,
+      "timestamp": "2021-11-20T12:00:00.000+00:00",
+      "humidityLevel": 87,
+      "plantId": 7
+    },
+    {
+      "id": 411,
+      "timestamp": "2021-11-21T12:00:00.000+00:00",
+      "humidityLevel": 80,
+      "plantId": 7
+    },
+    {
+      "id": 413,
+      "timestamp": "2021-11-22T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 7
+    },
+    {
+      "id": 415,
+      "timestamp": "2021-11-23T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 7
+    },
+    {
+      "id": 417,
+      "timestamp": "2021-11-24T12:00:00.000+00:00",
+      "humidityLevel": 69,
+      "plantId": 7
+    },
+    {
+      "id": 419,
+      "timestamp": "2021-11-25T12:00:00.000+00:00",
+      "humidityLevel": 3,
+      "plantId": 7
+    },
+    {
+      "id": 421,
+      "timestamp": "2021-11-26T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 7
+    },
+    {
+      "id": 423,
+      "timestamp": "2021-11-27T12:00:00.000+00:00",
+      "humidityLevel": 80,
+      "plantId": 7
+    },
+    {
+      "id": 425,
+      "timestamp": "2021-11-28T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 7
+    },
+    {
+      "id": 427,
+      "timestamp": "2021-12-10T12:00:00.000+00:00",
+      "humidityLevel": 99,
+      "plantId": 7
+    },
+    {
+      "id": 429,
+      "timestamp": "2021-12-11T12:00:00.000+00:00",
+      "humidityLevel": 11,
+      "plantId": 7
+    },
+    {
+      "id": 431,
+      "timestamp": "2021-12-12T12:00:00.000+00:00",
+      "humidityLevel": 94,
+      "plantId": 7
+    },
+    {
+      "id": 433,
+      "timestamp": "2021-12-13T12:00:00.000+00:00",
+      "humidityLevel": 72,
+      "plantId": 7
+    },
+    {
+      "id": 435,
+      "timestamp": "2021-12-14T12:00:00.000+00:00",
+      "humidityLevel": 11,
+      "plantId": 7
+    },
+    {
+      "id": 437,
+      "timestamp": "2021-12-15T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 7
+    },
+    {
+      "id": 439,
+      "timestamp": "2021-12-16T12:00:00.000+00:00",
+      "humidityLevel": 14,
+      "plantId": 7
+    },
+    {
+      "id": 441,
+      "timestamp": "2021-12-17T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 7
+    },
+    {
+      "id": 443,
+      "timestamp": "2021-12-18T12:00:00.000+00:00",
+      "humidityLevel": 81,
+      "plantId": 7
+    },
+    {
+      "id": 445,
+      "timestamp": "2021-12-19T12:00:00.000+00:00",
+      "humidityLevel": 64,
+      "plantId": 7
+    },
+    {
+      "id": 447,
+      "timestamp": "2021-12-20T12:00:00.000+00:00",
+      "humidityLevel": 88,
+      "plantId": 7
+    },
+    {
+      "id": 449,
+      "timestamp": "2021-12-21T12:00:00.000+00:00",
+      "humidityLevel": 83,
+      "plantId": 7
+    },
+    {
+      "id": 451,
+      "timestamp": "2021-12-22T12:00:00.000+00:00",
+      "humidityLevel": 94,
+      "plantId": 7
+    },
+    {
+      "id": 453,
+      "timestamp": "2021-12-23T12:00:00.000+00:00",
+      "humidityLevel": 11,
+      "plantId": 7
+    },
+    {
+      "id": 455,
+      "timestamp": "2021-12-24T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 7
+    },
+    {
+      "id": 457,
+      "timestamp": "2021-12-25T12:00:00.000+00:00",
+      "humidityLevel": 77,
+      "plantId": 7
+    },
+    {
+      "id": 459,
+      "timestamp": "2021-12-26T12:00:00.000+00:00",
+      "humidityLevel": 35,
+      "plantId": 7
+    },
+    {
+      "id": 461,
+      "timestamp": "2021-12-27T12:00:00.000+00:00",
+      "humidityLevel": 86,
+      "plantId": 7
+    },
+    {
+      "id": 463,
+      "timestamp": "2021-12-28T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 7
+    }
+  ],
+  "moistureRecordbyPlant8": [
+    {
+      "id": 10,
+      "timestamp": "2021-01-10T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 12,
+      "timestamp": "2021-01-11T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 14,
+      "timestamp": "2021-01-12T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 16,
+      "timestamp": "2021-01-13T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 18,
+      "timestamp": "2021-01-14T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 20,
+      "timestamp": "2021-01-15T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 8
+    },
+    {
+      "id": 22,
+      "timestamp": "2021-01-16T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 24,
+      "timestamp": "2021-01-17T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 26,
+      "timestamp": "2021-01-18T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 28,
+      "timestamp": "2021-01-19T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 8
+    },
+    {
+      "id": 30,
+      "timestamp": "2021-01-20T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 32,
+      "timestamp": "2021-01-21T12:00:00.000+00:00",
+      "humidityLevel": 44,
+      "plantId": 8
+    },
+    {
+      "id": 34,
+      "timestamp": "2021-01-22T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 36,
+      "timestamp": "2021-01-23T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 38,
+      "timestamp": "2021-01-24T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 40,
+      "timestamp": "2021-01-25T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 42,
+      "timestamp": "2021-01-26T12:00:00.000+00:00",
+      "humidityLevel": 47,
+      "plantId": 8
+    },
+    {
+      "id": 44,
+      "timestamp": "2021-01-27T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 8
+    },
+    {
+      "id": 46,
+      "timestamp": "2021-01-28T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 48,
+      "timestamp": "2021-02-10T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 50,
+      "timestamp": "2021-02-11T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 52,
+      "timestamp": "2021-02-12T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 8
+    },
+    {
+      "id": 54,
+      "timestamp": "2021-02-13T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 56,
+      "timestamp": "2021-02-14T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 58,
+      "timestamp": "2021-02-15T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 60,
+      "timestamp": "2021-02-16T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 62,
+      "timestamp": "2021-02-17T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 64,
+      "timestamp": "2021-02-18T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 8
+    },
+    {
+      "id": 66,
+      "timestamp": "2021-02-19T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 68,
+      "timestamp": "2021-02-20T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 70,
+      "timestamp": "2021-02-21T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 72,
+      "timestamp": "2021-02-22T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 8
+    },
+    {
+      "id": 74,
+      "timestamp": "2021-02-23T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 76,
+      "timestamp": "2021-02-24T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 78,
+      "timestamp": "2021-02-25T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 8
+    },
+    {
+      "id": 80,
+      "timestamp": "2021-02-26T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 82,
+      "timestamp": "2021-02-27T12:00:00.000+00:00",
+      "humidityLevel": 56,
+      "plantId": 8
+    },
+    {
+      "id": 84,
+      "timestamp": "2021-02-28T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 8
+    },
+    {
+      "id": 86,
+      "timestamp": "2021-03-10T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 88,
+      "timestamp": "2021-03-11T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 8
+    },
+    {
+      "id": 90,
+      "timestamp": "2021-03-12T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 92,
+      "timestamp": "2021-03-13T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 94,
+      "timestamp": "2021-03-14T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 8
+    },
+    {
+      "id": 96,
+      "timestamp": "2021-03-15T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 98,
+      "timestamp": "2021-03-16T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 100,
+      "timestamp": "2021-03-17T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 102,
+      "timestamp": "2021-03-18T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 8
+    },
+    {
+      "id": 104,
+      "timestamp": "2021-03-19T12:00:00.000+00:00",
+      "humidityLevel": 37,
+      "plantId": 8
+    },
+    {
+      "id": 106,
+      "timestamp": "2021-03-20T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 108,
+      "timestamp": "2021-03-21T12:00:00.000+00:00",
+      "humidityLevel": 34,
+      "plantId": 8
+    },
+    {
+      "id": 110,
+      "timestamp": "2021-03-22T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 112,
+      "timestamp": "2021-03-23T12:00:00.000+00:00",
+      "humidityLevel": 34,
+      "plantId": 8
+    },
+    {
+      "id": 114,
+      "timestamp": "2021-03-24T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 8
+    },
+    {
+      "id": 116,
+      "timestamp": "2021-03-25T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 118,
+      "timestamp": "2021-03-26T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 8
+    },
+    {
+      "id": 120,
+      "timestamp": "2021-03-27T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 122,
+      "timestamp": "2021-03-28T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 8
+    },
+    {
+      "id": 124,
+      "timestamp": "2021-04-10T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 126,
+      "timestamp": "2021-04-11T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 128,
+      "timestamp": "2021-04-12T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 130,
+      "timestamp": "2021-04-13T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 132,
+      "timestamp": "2021-04-14T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 134,
+      "timestamp": "2021-04-15T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 8
+    },
+    {
+      "id": 136,
+      "timestamp": "2021-04-16T12:00:00.000+00:00",
+      "humidityLevel": 35,
+      "plantId": 8
+    },
+    {
+      "id": 138,
+      "timestamp": "2021-04-17T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 140,
+      "timestamp": "2021-04-18T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 8
+    },
+    {
+      "id": 142,
+      "timestamp": "2021-04-19T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 8
+    },
+    {
+      "id": 144,
+      "timestamp": "2021-04-20T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 146,
+      "timestamp": "2021-04-21T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 8
+    },
+    {
+      "id": 148,
+      "timestamp": "2021-04-22T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 150,
+      "timestamp": "2021-04-23T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 152,
+      "timestamp": "2021-04-24T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 154,
+      "timestamp": "2021-04-25T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 156,
+      "timestamp": "2021-04-26T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 158,
+      "timestamp": "2021-04-27T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 160,
+      "timestamp": "2021-04-28T12:00:00.000+00:00",
+      "humidityLevel": 47,
+      "plantId": 8
+    },
+    {
+      "id": 162,
+      "timestamp": "2021-05-10T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 164,
+      "timestamp": "2021-05-11T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 166,
+      "timestamp": "2021-05-12T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 168,
+      "timestamp": "2021-05-13T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 170,
+      "timestamp": "2021-05-14T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 172,
+      "timestamp": "2021-05-15T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 174,
+      "timestamp": "2021-05-16T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 176,
+      "timestamp": "2021-05-17T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 178,
+      "timestamp": "2021-05-18T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 180,
+      "timestamp": "2021-05-19T12:00:00.000+00:00",
+      "humidityLevel": 64,
+      "plantId": 8
+    },
+    {
+      "id": 182,
+      "timestamp": "2021-05-20T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 184,
+      "timestamp": "2021-05-21T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 8
+    },
+    {
+      "id": 186,
+      "timestamp": "2021-05-22T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 188,
+      "timestamp": "2021-05-23T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 190,
+      "timestamp": "2021-05-24T12:00:00.000+00:00",
+      "humidityLevel": 56,
+      "plantId": 8
+    },
+    {
+      "id": 192,
+      "timestamp": "2021-05-25T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 194,
+      "timestamp": "2021-05-26T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 8
+    },
+    {
+      "id": 196,
+      "timestamp": "2021-05-27T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 198,
+      "timestamp": "2021-05-28T12:00:00.000+00:00",
+      "humidityLevel": 63,
+      "plantId": 8
+    },
+    {
+      "id": 200,
+      "timestamp": "2021-06-10T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 202,
+      "timestamp": "2021-06-11T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 204,
+      "timestamp": "2021-06-12T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 206,
+      "timestamp": "2021-06-13T12:00:00.000+00:00",
+      "humidityLevel": 51,
+      "plantId": 8
+    },
+    {
+      "id": 208,
+      "timestamp": "2021-06-14T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 8
+    },
+    {
+      "id": 210,
+      "timestamp": "2021-06-15T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 212,
+      "timestamp": "2021-06-16T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 214,
+      "timestamp": "2021-06-17T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 216,
+      "timestamp": "2021-06-18T12:00:00.000+00:00",
+      "humidityLevel": 55,
+      "plantId": 8
+    },
+    {
+      "id": 218,
+      "timestamp": "2021-06-19T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 220,
+      "timestamp": "2021-06-20T12:00:00.000+00:00",
+      "humidityLevel": 44,
+      "plantId": 8
+    },
+    {
+      "id": 222,
+      "timestamp": "2021-06-21T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 224,
+      "timestamp": "2021-06-22T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 8
+    },
+    {
+      "id": 226,
+      "timestamp": "2021-06-23T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 8
+    },
+    {
+      "id": 228,
+      "timestamp": "2021-06-24T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 230,
+      "timestamp": "2021-06-25T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 232,
+      "timestamp": "2021-06-26T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 234,
+      "timestamp": "2021-06-27T12:00:00.000+00:00",
+      "humidityLevel": 37,
+      "plantId": 8
+    },
+    {
+      "id": 236,
+      "timestamp": "2021-06-28T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 238,
+      "timestamp": "2021-07-10T12:00:00.000+00:00",
+      "humidityLevel": 46,
+      "plantId": 8
+    },
+    {
+      "id": 240,
+      "timestamp": "2021-07-11T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 242,
+      "timestamp": "2021-07-12T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 244,
+      "timestamp": "2021-07-13T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 246,
+      "timestamp": "2021-07-14T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 248,
+      "timestamp": "2021-07-15T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 250,
+      "timestamp": "2021-07-16T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 252,
+      "timestamp": "2021-07-17T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 254,
+      "timestamp": "2021-07-18T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 256,
+      "timestamp": "2021-07-19T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 258,
+      "timestamp": "2021-07-20T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 260,
+      "timestamp": "2021-07-21T12:00:00.000+00:00",
+      "humidityLevel": 37,
+      "plantId": 8
+    },
+    {
+      "id": 262,
+      "timestamp": "2021-07-22T12:00:00.000+00:00",
+      "humidityLevel": 34,
+      "plantId": 8
+    },
+    {
+      "id": 264,
+      "timestamp": "2021-07-23T12:00:00.000+00:00",
+      "humidityLevel": 55,
+      "plantId": 8
+    },
+    {
+      "id": 266,
+      "timestamp": "2021-07-24T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 268,
+      "timestamp": "2021-07-25T12:00:00.000+00:00",
+      "humidityLevel": 38,
+      "plantId": 8
+    },
+    {
+      "id": 270,
+      "timestamp": "2021-07-26T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 272,
+      "timestamp": "2021-07-27T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 274,
+      "timestamp": "2021-07-28T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 8
+    },
+    {
+      "id": 276,
+      "timestamp": "2021-08-10T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 278,
+      "timestamp": "2021-08-11T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 280,
+      "timestamp": "2021-08-12T12:00:00.000+00:00",
+      "humidityLevel": 56,
+      "plantId": 8
+    },
+    {
+      "id": 282,
+      "timestamp": "2021-08-13T12:00:00.000+00:00",
+      "humidityLevel": 64,
+      "plantId": 8
+    },
+    {
+      "id": 284,
+      "timestamp": "2021-08-14T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 286,
+      "timestamp": "2021-08-15T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 288,
+      "timestamp": "2021-08-16T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 290,
+      "timestamp": "2021-08-17T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 8
+    },
+    {
+      "id": 292,
+      "timestamp": "2021-08-18T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 294,
+      "timestamp": "2021-08-19T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 296,
+      "timestamp": "2021-08-20T12:00:00.000+00:00",
+      "humidityLevel": 56,
+      "plantId": 8
+    },
+    {
+      "id": 298,
+      "timestamp": "2021-08-21T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 8
+    },
+    {
+      "id": 300,
+      "timestamp": "2021-08-22T12:00:00.000+00:00",
+      "humidityLevel": 55,
+      "plantId": 8
+    },
+    {
+      "id": 302,
+      "timestamp": "2021-08-23T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 304,
+      "timestamp": "2021-08-24T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 306,
+      "timestamp": "2021-08-25T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 8
+    },
+    {
+      "id": 308,
+      "timestamp": "2021-08-26T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 310,
+      "timestamp": "2021-08-27T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 312,
+      "timestamp": "2021-08-28T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 314,
+      "timestamp": "2021-09-10T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 316,
+      "timestamp": "2021-09-11T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 318,
+      "timestamp": "2021-09-12T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 320,
+      "timestamp": "2021-09-13T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 322,
+      "timestamp": "2021-09-14T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 324,
+      "timestamp": "2021-09-15T12:00:00.000+00:00",
+      "humidityLevel": 55,
+      "plantId": 8
+    },
+    {
+      "id": 326,
+      "timestamp": "2021-09-16T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 328,
+      "timestamp": "2021-09-17T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 8
+    },
+    {
+      "id": 330,
+      "timestamp": "2021-09-18T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 332,
+      "timestamp": "2021-09-19T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 334,
+      "timestamp": "2021-09-20T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 336,
+      "timestamp": "2021-09-21T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 338,
+      "timestamp": "2021-09-22T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 340,
+      "timestamp": "2021-09-23T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 342,
+      "timestamp": "2021-09-24T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 344,
+      "timestamp": "2021-09-25T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 346,
+      "timestamp": "2021-09-26T12:00:00.000+00:00",
+      "humidityLevel": 47,
+      "plantId": 8
+    },
+    {
+      "id": 348,
+      "timestamp": "2021-09-27T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 8
+    },
+    {
+      "id": 350,
+      "timestamp": "2021-09-28T12:00:00.000+00:00",
+      "humidityLevel": 64,
+      "plantId": 8
+    },
+    {
+      "id": 352,
+      "timestamp": "2021-10-10T12:00:00.000+00:00",
+      "humidityLevel": 35,
+      "plantId": 8
+    },
+    {
+      "id": 354,
+      "timestamp": "2021-10-11T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 356,
+      "timestamp": "2021-10-12T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 358,
+      "timestamp": "2021-10-13T12:00:00.000+00:00",
+      "humidityLevel": 64,
+      "plantId": 8
+    },
+    {
+      "id": 360,
+      "timestamp": "2021-10-14T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 362,
+      "timestamp": "2021-10-15T12:00:00.000+00:00",
+      "humidityLevel": 43,
+      "plantId": 8
+    },
+    {
+      "id": 364,
+      "timestamp": "2021-10-16T12:00:00.000+00:00",
+      "humidityLevel": 41,
+      "plantId": 8
+    },
+    {
+      "id": 366,
+      "timestamp": "2021-10-17T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 8
+    },
+    {
+      "id": 368,
+      "timestamp": "2021-10-18T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 370,
+      "timestamp": "2021-10-19T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 372,
+      "timestamp": "2021-10-20T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 374,
+      "timestamp": "2021-10-21T12:00:00.000+00:00",
+      "humidityLevel": 49,
+      "plantId": 8
+    },
+    {
+      "id": 376,
+      "timestamp": "2021-10-22T12:00:00.000+00:00",
+      "humidityLevel": 42,
+      "plantId": 8
+    },
+    {
+      "id": 378,
+      "timestamp": "2021-10-23T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    },
+    {
+      "id": 380,
+      "timestamp": "2021-10-24T12:00:00.000+00:00",
+      "humidityLevel": 63,
+      "plantId": 8
+    },
+    {
+      "id": 382,
+      "timestamp": "2021-10-25T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 384,
+      "timestamp": "2021-10-26T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 386,
+      "timestamp": "2021-10-27T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 388,
+      "timestamp": "2021-10-28T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 8
+    },
+    {
+      "id": 390,
+      "timestamp": "2021-11-10T12:00:00.000+00:00",
+      "humidityLevel": 52,
+      "plantId": 8
+    },
+    {
+      "id": 392,
+      "timestamp": "2021-11-11T12:00:00.000+00:00",
+      "humidityLevel": 58,
+      "plantId": 8
+    },
+    {
+      "id": 394,
+      "timestamp": "2021-11-12T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 396,
+      "timestamp": "2021-11-13T12:00:00.000+00:00",
+      "humidityLevel": 32,
+      "plantId": 8
+    },
+    {
+      "id": 398,
+      "timestamp": "2021-11-14T12:00:00.000+00:00",
+      "humidityLevel": 59,
+      "plantId": 8
+    },
+    {
+      "id": 400,
+      "timestamp": "2021-11-15T12:00:00.000+00:00",
+      "humidityLevel": 33,
+      "plantId": 8
+    },
+    {
+      "id": 402,
+      "timestamp": "2021-11-16T12:00:00.000+00:00",
+      "humidityLevel": 47,
+      "plantId": 8
+    },
+    {
+      "id": 404,
+      "timestamp": "2021-11-17T12:00:00.000+00:00",
+      "humidityLevel": 56,
+      "plantId": 8
+    },
+    {
+      "id": 406,
+      "timestamp": "2021-11-18T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 8
+    },
+    {
+      "id": 408,
+      "timestamp": "2021-11-19T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 410,
+      "timestamp": "2021-11-20T12:00:00.000+00:00",
+      "humidityLevel": 37,
+      "plantId": 8
+    },
+    {
+      "id": 412,
+      "timestamp": "2021-11-21T12:00:00.000+00:00",
+      "humidityLevel": 37,
+      "plantId": 8
+    },
+    {
+      "id": 414,
+      "timestamp": "2021-11-22T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 416,
+      "timestamp": "2021-11-23T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 418,
+      "timestamp": "2021-11-24T12:00:00.000+00:00",
+      "humidityLevel": 48,
+      "plantId": 8
+    },
+    {
+      "id": 420,
+      "timestamp": "2021-11-25T12:00:00.000+00:00",
+      "humidityLevel": 64,
+      "plantId": 8
+    },
+    {
+      "id": 422,
+      "timestamp": "2021-11-26T12:00:00.000+00:00",
+      "humidityLevel": 63,
+      "plantId": 8
+    },
+    {
+      "id": 424,
+      "timestamp": "2021-11-27T12:00:00.000+00:00",
+      "humidityLevel": 57,
+      "plantId": 8
+    },
+    {
+      "id": 426,
+      "timestamp": "2021-11-28T12:00:00.000+00:00",
+      "humidityLevel": 56,
+      "plantId": 8
+    },
+    {
+      "id": 428,
+      "timestamp": "2021-12-10T12:00:00.000+00:00",
+      "humidityLevel": 39,
+      "plantId": 8
+    },
+    {
+      "id": 430,
+      "timestamp": "2021-12-11T12:00:00.000+00:00",
+      "humidityLevel": 44,
+      "plantId": 8
+    },
+    {
+      "id": 432,
+      "timestamp": "2021-12-12T12:00:00.000+00:00",
+      "humidityLevel": 60,
+      "plantId": 8
+    },
+    {
+      "id": 434,
+      "timestamp": "2021-12-13T12:00:00.000+00:00",
+      "humidityLevel": 44,
+      "plantId": 8
+    },
+    {
+      "id": 436,
+      "timestamp": "2021-12-14T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 438,
+      "timestamp": "2021-12-15T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 440,
+      "timestamp": "2021-12-16T12:00:00.000+00:00",
+      "humidityLevel": 34,
+      "plantId": 8
+    },
+    {
+      "id": 442,
+      "timestamp": "2021-12-17T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 444,
+      "timestamp": "2021-12-18T12:00:00.000+00:00",
+      "humidityLevel": 54,
+      "plantId": 8
+    },
+    {
+      "id": 446,
+      "timestamp": "2021-12-19T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 448,
+      "timestamp": "2021-12-20T12:00:00.000+00:00",
+      "humidityLevel": 40,
+      "plantId": 8
+    },
+    {
+      "id": 450,
+      "timestamp": "2021-12-21T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 452,
+      "timestamp": "2021-12-22T12:00:00.000+00:00",
+      "humidityLevel": 50,
+      "plantId": 8
+    },
+    {
+      "id": 454,
+      "timestamp": "2021-12-23T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 456,
+      "timestamp": "2021-12-24T12:00:00.000+00:00",
+      "humidityLevel": 53,
+      "plantId": 8
+    },
+    {
+      "id": 458,
+      "timestamp": "2021-12-25T12:00:00.000+00:00",
+      "humidityLevel": 62,
+      "plantId": 8
+    },
+    {
+      "id": 460,
+      "timestamp": "2021-12-26T12:00:00.000+00:00",
+      "humidityLevel": 61,
+      "plantId": 8
+    },
+    {
+      "id": 462,
+      "timestamp": "2021-12-27T12:00:00.000+00:00",
+      "humidityLevel": 45,
+      "plantId": 8
+    },
+    {
+      "id": 464,
+      "timestamp": "2021-12-28T12:00:00.000+00:00",
+      "humidityLevel": 36,
+      "plantId": 8
+    }
+  ]
 }
