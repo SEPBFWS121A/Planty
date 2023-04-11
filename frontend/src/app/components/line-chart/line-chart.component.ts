@@ -55,8 +55,6 @@ export class LineChartComponent implements OnInit {
             i < this.plantData.length;
             i++
           ) {
-            //this.plantData.length
-            console.log();
             this.lableData.push(this.plantData[i].timestamp.substring(0, 10));
             this.moistureData.push(this.plantData[i].humidityLevel);
           }

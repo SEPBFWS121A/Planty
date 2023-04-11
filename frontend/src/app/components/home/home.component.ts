@@ -11,13 +11,11 @@ export class HomeComponent implements OnInit {
   plants: any;
 
   constructor(
-    private defaultService: DefaultService
-  ) // private apiService: ApiService
-  {}
+    private defaultService: DefaultService // private apiService: ApiService
+  ) {}
 
   ngOnInit(): void {
     this.defaultService.plantGet().subscribe((result) => {
-      console.log(result);
       this.plants = result;
     });
     // this.apiService.plantGet().subscribe((result) => {

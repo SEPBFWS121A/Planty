@@ -4,7 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SensorManagementComponent } from './components/sensor-management/sensor-management.component';
 import { CategoryManagementComponent } from './components/category-management/category-management.component';
-import { PlantManagemnetComponent } from './components/plant-managemnet/plant-managemnet.component';
+import { PlantManagementComponent } from './components/plant-management/plant-management.component';
 import { NotificationComponent } from './components/notification/notification.component';
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'sensor', component: SensorManagementComponent },
   { path: 'category', component: CategoryManagementComponent },
-  { path: 'plant', component: PlantManagemnetComponent },
+  { path: 'plant', component: PlantManagementComponent },
   { path: 'notification', component: NotificationComponent },
 ];
 

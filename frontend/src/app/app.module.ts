@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotificationComponent } from './components/notification/notification.component';
-import { PlantManagemnetComponent } from './components/plant-managemnet/plant-managemnet.component';
+import { PlantManagementComponent } from './components/plant-management/plant-management.component';
 import { CategoryManagementComponent } from './components/category-management/category-management.component';
 import { SensorManagementComponent } from './components/sensor-management/sensor-management.component';
 import { SettingsComponent } from './components/settings/settings.component';
@@ -32,7 +32,7 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     FooterComponent,
     HomeComponent,
     NotificationComponent,
-    PlantManagemnetComponent,
+    PlantManagementComponent,
     CategoryManagementComponent,
     SensorManagementComponent,
     SettingsComponent,

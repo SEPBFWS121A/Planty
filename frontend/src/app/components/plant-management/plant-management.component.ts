@@ -4,11 +4,11 @@ import { FormControl } from '@angular/forms';
 import { DefaultService } from 'src/assets/ts-api-client';
 
 @Component({
-  selector: 'app-plant-managemnet',
-  templateUrl: './plant-managemnet.component.html',
-  styleUrls: ['./plant-managemnet.component.css'],
+  selector: 'app-plant-management',
+  templateUrl: './plant-management.component.html',
+  styleUrls: ['./plant-management.component.css'],
 })
-export class PlantManagemnetComponent implements OnInit {
+export class PlantManagementComponent implements OnInit {
   selectedFW = new FormControl();
   categories: string[] = ['Category 1', 'Category 2', 'Category 3'];
   sensors: string[] = ['Sensor 1', 'Sensor 2', 'Sensor 3'];
@@ -23,9 +23,8 @@ export class PlantManagemnetComponent implements OnInit {
   data: any;
 
   constructor(
-    private defaultService: DefaultService
-  ) // private apiService: ApiService
-  {}
+    private defaultService: DefaultService // private apiService: ApiService
+  ) {}
   ngOnInit(): void {
     this.defaultService.plantGet().subscribe((result) => {
       this.data = result;
