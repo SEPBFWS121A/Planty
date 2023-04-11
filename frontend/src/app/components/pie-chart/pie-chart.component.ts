@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
-import { ApiService } from 'src/app/services/api.service';
+// import { ApiService } from 'src/app/services/api.service';
 import { DefaultService } from 'src/assets/ts-api-client';
 
 @Component({
@@ -16,12 +16,12 @@ export class PieChartComponent implements OnInit {
   plantName: string = '';
 
   constructor(
-    private apiService: ApiService,
+    // private apiService: ApiService,
     private defaultService: DefaultService
   ) {}
 
   ngOnInit(): void {
-    // this.defaultService
+    // this.apiService
     //   .moistureRecordByPlantPlantIdGet(this.plantID)
     //   .subscribe((result) => {
     //     this.plantData = result;
@@ -31,10 +31,11 @@ export class PieChartComponent implements OnInit {
     //       this.renderChart();
     //     }
     //   });
-    // this.defaultService.plantPlantIdGet(this.plantID).subscribe((result) => {
-    //   this.plantName = result.name!;
+    // this.apiService.plantPlantIdGet(this.plantID).subscribe((result) => {
+    //   this.plant = result;
+    //   this.plantName = this.plant[0].name;
     // });
-    this.apiService
+    this.defaultService
       .moistureRecordByPlantPlantIdGet(this.plantID)
       .subscribe((result) => {
         this.plantData = result;
@@ -44,9 +45,9 @@ export class PieChartComponent implements OnInit {
           this.renderChart();
         }
       });
-    this.apiService.plantPlantIdGet(this.plantID).subscribe((result) => {
+    this.defaultService.plantPlantIdGet(this.plantID).subscribe((result) => {
       this.plant = result;
-      this.plantName = this.plant[0].name;
+      this.plantName = this.plant.name;
     });
   }
 

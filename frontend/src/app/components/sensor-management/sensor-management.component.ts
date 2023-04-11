@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
+// import { ApiService } from 'src/app/services/api.service';
+import { DefaultService } from 'src/assets/ts-api-client';
 
 @Component({
   selector: 'app-sensor-management',
@@ -18,11 +19,17 @@ export class SensorManagementComponent implements OnInit {
   ];
   data: any;
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private defaultService: DefaultService
+  ) // private apiService: ApiService
+  {}
 
   ngOnInit(): void {
-    this.apiService.sensorGet().subscribe((result) => {
+    this.defaultService.sensorGet().subscribe((result) => {
       this.data = result;
     });
+    // this.apiService.sensorGet().subscribe((result) => {
+    //   this.data = result;
+    // });
   }
 }

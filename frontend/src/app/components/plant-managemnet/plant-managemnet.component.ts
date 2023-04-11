@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ApiService } from 'src/app/services/api.service';
+// import { ApiService } from 'src/app/services/api.service';
+import { DefaultService } from 'src/assets/ts-api-client';
 
 @Component({
   selector: 'app-plant-managemnet',
@@ -21,10 +22,16 @@ export class PlantManagemnetComponent implements OnInit {
   ];
   data: any;
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private defaultService: DefaultService
+  ) // private apiService: ApiService
+  {}
   ngOnInit(): void {
-    this.apiService.plantGet().subscribe((result) => {
+    this.defaultService.plantGet().subscribe((result) => {
       this.data = result;
     });
+    // this.apiService.plantGet().subscribe((result) => {
+    //   this.data = result;
+    // });
   }
 }

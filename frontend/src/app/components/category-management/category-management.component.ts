@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
+// import { ApiService } from 'src/app/services/api.service';
+import { DefaultService } from 'src/assets/ts-api-client';
 
 @Component({
   selector: 'app-category-management',
@@ -15,11 +16,17 @@ export class CategoryManagementComponent implements OnInit {
   ];
   data: any;
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private defaultService: DefaultService
+  ) // private apiService: ApiService
+  {}
 
   ngOnInit(): void {
-    this.apiService.plantTypeGet().subscribe((result) => {
+    this.defaultService.plantTypeGet().subscribe((result) => {
       this.data = result;
     });
+    // this.apiService.plantTypeGet().subscribe((result) => {
+    //   this.data = result;
+    // });
   }
 }
