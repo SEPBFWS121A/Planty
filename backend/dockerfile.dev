@@ -1,0 +1,17 @@
+# Base build on latest Alpine Linux image
+FROM alpine:latest
+
+# Install OpenJDK 17 and Maven
+# The --no-cache option prevents the package index from being cached locally,
+# which reduces the size of the image even further.
+RUN apk add --no-cache openjdk17 maven
+
+# Set /app as working directory
+WORKDIR /app
+
+# Expose port used for Quarkus development server
+EXPOSE 8080
+
+# By default, if no other command is provided,
+# clean maven build directory and run quarkus in dev mode
+CMD mvn clean quarkus:dev
