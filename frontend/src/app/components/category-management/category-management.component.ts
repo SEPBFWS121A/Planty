@@ -39,14 +39,24 @@ export class CategoryManagementComponent implements OnInit {
     this.category.name = name;
     this.category.description = description;
     this.category.minHumidityLevel = Number(minHumidityLevel);
-    await this.defaultService.plantTypePost(this.category).subscribe();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    location.reload();
+    this.defaultService.plantTypePost(this.category).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 
   async deleteItem(data: any) {
-    await this.defaultService.plantTypePlantTypeIdDelete(data.id).subscribe();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    location.reload();
+    await this.defaultService.plantTypePlantTypeIdDelete(data.id).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 }

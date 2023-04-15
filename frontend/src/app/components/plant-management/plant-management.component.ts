@@ -75,14 +75,24 @@ export class PlantManagementComponent implements OnInit {
         break;
       }
     }
-    await this.defaultService.plantPost(this.plant).subscribe();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    location.reload();
+    await this.defaultService.plantPost(this.plant).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 
   async deleteItem(data: any) {
-    await this.defaultService.plantPlantIdDelete(data.id).subscribe();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    location.reload();
+    await this.defaultService.plantPlantIdDelete(data.id).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 }

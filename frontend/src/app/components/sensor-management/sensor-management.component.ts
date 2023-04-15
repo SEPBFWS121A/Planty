@@ -46,14 +46,24 @@ export class SensorManagementComponent implements OnInit {
     this.sensor.name = name;
     this.sensor.description = description;
 
-    await this.defaultService.sensorPost(this.sensor).subscribe();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    location.reload();
+    await this.defaultService.sensorPost(this.sensor).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 
   async deleteItem(data: any) {
-    await this.defaultService.sensorSensorIdDelete(data.id).subscribe();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    location.reload();
+    await this.defaultService.sensorSensorIdDelete(data.id).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 }
