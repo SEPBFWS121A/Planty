@@ -14,3 +14,13 @@
   .mat-column-minHumidityLevel {
     width: 20% !important;
   }
+  .mat-column-delete {
+    color: red;
+    font-size: larger;
+    width: 10% !important;
+  }
+  .mat-column-delete:hover {
+    color: grey;
+    font-size: larger;
+    width: 10% !important;
+  }

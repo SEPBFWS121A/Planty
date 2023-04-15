@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { ApiService } from 'src/app/services/api.service';
-import { DefaultService } from 'src/assets/ts-api-client';
+import { DefaultService, SensorPayload } from 'src/assets/ts-api-client';
 
 @Component({
   selector: 'app-sensor-management',
@@ -16,13 +16,15 @@ export class SensorManagementComponent implements OnInit {
     'humidityScalingTo',
     'lastCalibration',
     'sleepTimeout',
+    'delete',
   ];
   data: any;
 
+  sensor: SensorPayload = {};
+
   constructor(
-    private defaultService: DefaultService
-  ) // private apiService: ApiService
-  {}
+    private defaultService: DefaultService // private apiService: ApiService
+  ) {}
 
   ngOnInit(): void {
     this.defaultService.sensorGet().subscribe((result) => {
@@ -31,5 +33,37 @@ export class SensorManagementComponent implements OnInit {
     // this.apiService.sensorGet().subscribe((result) => {
     //   this.data = result;
     // });
+  }
+
+  async saveSensor(
+    name: string,
+    description: string
+    // humidityScalingFrom: string,
+    // humidityScalingTo: string,
+    // lastCalibration: string,
+    // sleepTimeout: string
+  ) {
+    this.sensor.name = name;
+    this.sensor.description = description;
+
+    await this.defaultService.sensorPost(this.sensor).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
+  }
+
+  async deleteItem(data: any) {
+    await this.defaultService.sensorSensorIdDelete(data.id).subscribe({
+      next(answer) {
+        location.reload();
+      },
+      error(msg) {
+        console.log('Error posting category: ', msg);
+      },
+    });
   }
 }

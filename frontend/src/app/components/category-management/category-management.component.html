@@ -1,6 +1,84 @@
 <div class="grid-cols-1">
-  <app-mangement-form [visibility]="'invisible'" [menuetype]="'Category'">
-  </app-mangement-form>
+  <div class="grid grid-cols-5 gap-1 px-10 py-8">
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Name</label
+          >
+          <input
+            #name
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Name"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Description</label
+          >
+          <input
+            #description
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Description"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Min Humidity Level</label
+          >
+          <input
+            #minHumidityLevel
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Min Humidity Level"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Submit</label
+          >
+          <button
+            type="button"
+            class="bg-blue-500 hover:bg-blue-700 text-white text-base font-normal form-control block w-full px-3 py-3 mt-1 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
+            (click)="
+              saveCategory(
+                name.value,
+                description.value,
+                minHumidityLevel.value
+              )
+            "
+          >
+            Add Category
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <table mat-table [dataSource]="data" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -20,6 +98,13 @@
     <ng-container matColumnDef="minHumidityLevel">
       <th mat-header-cell *matHeaderCellDef>Min Humidity Level</th>
       <td mat-cell *matCellDef="let element">{{ element.minHumidityLevel }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button (click)="deleteItem(element)">Delete</button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

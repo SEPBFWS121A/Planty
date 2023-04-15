@@ -1,10 +1,132 @@
 <div class="grid-cols-1">
-  <app-mangement-form
-    [visibility]="'invisible'"
-    [menuetype]="'Sensor'"
-    [description]="'IP'"
-  >
-  </app-mangement-form>
+  <div class="grid grid-cols-5 gap-1 px-10 py-8">
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Name</label
+          >
+          <input
+            #name
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Name"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Description</label
+          >
+          <input
+            #description
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Description"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- 
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Humidity Scaling From</label
+          >
+          <input
+            #humidityScalingFrom
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Humidity Scaling From"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Humidity Scaling To</label
+          >
+          <input
+            #humidityScalingto
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Humidity Scaling To"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Last Calibration</label
+          >
+          <input
+            #lastCalibration
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Last Calibration"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Sleep Timeout</label
+          >
+          <input
+            #sleepTimeout
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Sleep Timeout"
+          />
+        </div>
+      </div>
+    </div> -->
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Submit</label
+          >
+          <button
+            type="button"
+            class="bg-blue-500 hover:bg-blue-700 text-white text-base font-normal form-control block w-full px-3 py-3 mt-1 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
+            (click)="saveSensor(name.value, description.value)"
+          >
+            Add Sensor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <table mat-table [dataSource]="data" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
@@ -46,6 +168,13 @@
     <ng-container matColumnDef="sleepTimeout">
       <th mat-header-cell *matHeaderCellDef>Sleep Timeout</th>
       <td mat-cell *matCellDef="let element">{{ element.sleepTimeout }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button (click)="deleteItem(element)">Delete</button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
