@@ -8,7 +8,4 @@ if(-not $WD.EndsWith("\backend")) {
 }
 
 # Build docker image
-docker build -t planty-backend .
-
-# Compile backend inside container
-docker run -it --rm --name planty-backend-compiler -v ${WD}:/app -v ${HOME}\.m2:/root/.m2 planty-backend mvn clean quarkus:build
+docker build -t planty-backend-prod -f dockerfile .

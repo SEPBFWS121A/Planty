@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Checks
+# Check if user is in the backend directory
 WD=$(pwd)
 if [[ ! "$WD" == *"/backend" ]]
 then
@@ -8,5 +8,5 @@ then
     exit
 fi
 
-# Run quarkus in dev hot re-compile mode
-quarkus dev
+# Build docker image
+docker build -t planty-backend-prod -f dockerfile .

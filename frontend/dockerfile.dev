@@ -15,5 +15,6 @@ WORKDIR /app
 # Expose port used for Angular development server
 EXPOSE 4200
 
-# If no other command is specified, print a message and exit
-CMD echo Your Frontend Container is working! Please specify a command to run in it. Exiting container.
+# By default, if no other command is provided,
+# install packages with yarn and run Angular in dev mode
+CMD yarn install && ng serve --poll 2000 --disable-host-check --host 0.0.0.0

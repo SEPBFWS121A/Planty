@@ -4,8 +4,24 @@ info:
   description: "API for communication between frontend, microcontroller and backend."
   version: 0.0.4
 servers:
-  - url: http://localhost:8080/
-    description: Local development server
+  - url: "{protocol}://{host}:{port}/{basePath}"
+    description: Production server
+    variables:
+      protocol:
+        enum:
+          - "http"
+          - "https"
+        default: https
+        description: Protocol to use for communication.
+      host:
+        default: "localhost"
+        description: Host to use for communication.
+      port:
+        default: "443"
+        description: Port to use for communication.
+      basePath:
+        default: ""
+        description: Base path to use for communication.
 paths:
   # Moisture Record endpoint
   /moistureRecord:
