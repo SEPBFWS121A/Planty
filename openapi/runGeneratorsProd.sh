@@ -8,6 +8,16 @@ then
     exit
 fi
 
+# Ask user for server variables
+echo "Please enter the protocol (http or https):"
+read PROTOCOL
+echo "Please enter the host (e.g. localhost):"
+read HOST
+echo "Please enter the port (e.g. 8080):"
+read PORT
+echo "Please enter the base path (e.g. /api, can also be left empty):"
+read BASE_PATH
+
 # Setup
 mkdir -p ./bin
 curl https://raw.githubusercontent.com/OpenAPITools/openapi-generator/master/bin/utils/openapi-generator-cli.sh > ./bin/openapi-generator.sh
@@ -19,11 +29,11 @@ mkdir -p ./.backend ./.frontend
 
 # Generating backend
 echo '{ "hideGenerationTimestamp": true, "interfaceOnly": true, "useSwaggerAnnotations": false, "returnResponse": true }"' > ./config.json
-bin/openapi-generator.sh generate -i openapi.yaml -g jaxrs-spec --package-name "de.planty.gen" --api-package "de.planty.gen.api" --model-package "de.planty.gen.model" --model-name-prefix "Gen" -c ./config.json -o ./.backend
+bin/openapi-generator.sh generate -i openapi.yaml -g jaxrs-spec --package-name "de.planty.gen" --api-package "de.planty.gen.api" --model-package "de.planty.gen.model" --model-name-prefix "Gen" --server-variables protocol="$PROTOCOL",host="$HOST",port="$PORT",basePath="$BASE_PATH" -c ./config.json -o ./.backend
 rm ./config.json
 
 # Generating frontend
-bin/openapi-generator.sh generate -i openapi.yaml -g typescript-angular --type-mappings "DateTime=Date" -o ./.frontend
+bin/openapi-generator.sh generate -i openapi.yaml -g typescript-angular --type-mappings "DateTime=Date" --server-variables protocol="$PROTOCOL",host="$HOST",port="$PORT",basePath="$BASE_PATH" -o ./.frontend
 
 # Copying to backend
 rm -rf ../backend/src/main/java/de/planty/gen
