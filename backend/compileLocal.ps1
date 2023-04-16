@@ -11,4 +11,4 @@ if(-not $WD.EndsWith("\backend")) {
 docker build -t planty-backend-dev -f dockerfile.dev .
 
 # Overwrite container's default command: Compile backend inside container
-docker run -it --rm --name planty-backend-compiler -v ${WD}:/app -v ${HOME}\.m2:/root/.m2 planty-backend-dev mvn clean quarkus:build
+docker run -it --rm --name planty-backend-compiler -v ${WD}:/app -v ${HOME}\.m2:/root/.m2 planty-backend-dev mvn clean install -DskipTests

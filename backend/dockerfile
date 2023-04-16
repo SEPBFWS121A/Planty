@@ -15,8 +15,8 @@ COPY . /app
 # Set /app as working directory
 WORKDIR /app
 
-# Build the quarkus application
-RUN mvn clean quarkus:build
+# Build the quarkus application using maven and skip tests
+RUN mvn clean install -DskipTests
 
 # Uninstall maven
 RUN apk del maven
