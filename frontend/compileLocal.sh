@@ -9,7 +9,7 @@ then
 fi
 
 # Build docker image
-docker build -t planty-frontend .
+docker build -t planty-frontend-dev -f dockerfile.dev .
 
 # Run yarn install inside container
 docker run -it --rm --name planty-frontend-compiler -v "$WD":/app planty-frontend yarn install
