@@ -1,5 +1,5 @@
 <div class="grid-cols-1">
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-1 px-4 md:px-10 py-8">
+  <div class="grid grid-cols-5 gap-1 px-10 py-8">
     <div class="m-3">
       <div class="flex justify-center pl-3">
         <div class="mb-3 w-full">
@@ -35,7 +35,75 @@
         </div>
       </div>
     </div>
-
+    <!-- 
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Humidity Scaling From</label
+          >
+          <input
+            #humidityScalingFrom
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Humidity Scaling From"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Humidity Scaling To</label
+          >
+          <input
+            #humidityScalingto
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Humidity Scaling To"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Last Calibration</label
+          >
+          <input
+            #lastCalibration
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Last Calibration"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Sleep Timeout</label
+          >
+          <input
+            #sleepTimeout
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Sleep Timeout"
+          />
+        </div>
+      </div>
+    </div> -->
 
     <div class="m-3">
       <div class="flex justify-center pl-3">
@@ -57,9 +125,7 @@
     </div>
   </div>
 
-<div class="mat-elevation-z8 mat-table-container">
-  <table mat-table [dataSource]="data" class="mat-table">
-
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
       <td mat-cell *matCellDef="let element">{{ element.id }}</td>
@@ -77,17 +143,23 @@
 
     <ng-container matColumnDef="humidityScalingFrom">
       <th mat-header-cell *matHeaderCellDef>Humidity Scaling From</th>
-      <td mat-cell *matCellDef="let element">{{ element.humidityScalingFrom }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.humidityScalingFrom }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="humidityScalingTo">
       <th mat-header-cell *matHeaderCellDef>Humidity Scaling To</th>
-      <td mat-cell *matCellDef="let element">{{ element.humidityScalingTo }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.humidityScalingTo }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="lastCalibration">
       <th mat-header-cell *matHeaderCellDef>Last Calibration</th>
-      <td mat-cell *matCellDef="let element">{{ element.lastCalibration }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ element.lastCalibration }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="sleepTimeout">
@@ -98,13 +170,11 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button color="warn" (click)="deleteItem(element)">
-        </button>
+        <button mat-button (click)="deleteItem(element)">Delete</button>
       </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-</div>
 </div>
