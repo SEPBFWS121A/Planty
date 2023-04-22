@@ -1,5 +1,4 @@
 <!--
-<!--
 <div class="grid-cols-1">
   <div class="grid grid-cols-5 gap-1 px-10 py-8">
     <div class="m-3">
@@ -19,7 +18,6 @@
         </div>
       </div>
     </div>
-
     <div class="m-3">
       <div class="flex justify-center pl-3">
         <div class="mb-3 w-full">
@@ -37,7 +35,6 @@
         </div>
       </div>
     </div>
-
     <div class="m-3">
       <div class="flex justify-center pl-3">
         <div class="mb-3 w-full">
@@ -55,7 +52,6 @@
         </div>
       </div>
     </div>
-
     <div class="m-3">
       <div class="flex justify-center pl-3">
         <div class="mb-3 w-full">
@@ -86,29 +82,24 @@
       <th mat-header-cell *matHeaderCellDef>Id</th>
       <td mat-cell *matCellDef="let element">{{ element.id }}</td>
     </ng-container>
-
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
       <td mat-cell *matCellDef="let element">{{ element.name }}</td>
     </ng-container>
-
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef>Description</th>
       <td mat-cell *matCellDef="let element">{{ element.description }}</td>
     </ng-container>
-
     <ng-container matColumnDef="minHumidityLevel">
       <th mat-header-cell *matHeaderCellDef>Min Humidity Level</th>
       <td mat-cell *matCellDef="let element">{{ element.minHumidityLevel }}</td>
     </ng-container>
-
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
         <button mat-button (click)="deleteItem(element)">Delete</button>
       </td>
     </ng-container>
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
@@ -118,7 +109,6 @@
 <div class="px-4 py-8">
   <form class="mb-6">
     <div class="mb-4">
-      <label for="name" class="block text-gray-700 font-bold mb-2">
       <label for="name" class="block text-gray-700 font-bold mb-2">
         Name
       </label>
@@ -132,7 +122,6 @@
 
     <div class="mb-4">
       <label for="description" class="block text-gray-700 font-bold mb-2">
-      <label for="description" class="block text-gray-700 font-bold mb-2">
         Description
       </label>
       <input
@@ -144,7 +133,6 @@
     </div>
 
     <div class="mb-4">
-      <label for="minHumidityLevel" class="block text-gray-700 font-bold mb-2">
       <label for="minHumidityLevel" class="block text-gray-700 font-bold mb-2">
         Min Humidity Level
       </label>
@@ -208,10 +196,6 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="bg-gray-100 text-gray-700" *ngFor="let element of data">
-          <td class="border px-4 py-2">{{ element.id }}</td>
-          <td class="border px-4 py-2">{{ element.name }}</td>
-          <td class="border px-4 py-2">{{ element.description }}</td>
         <tr class="bg-gray-100 text-gray-700" *ngFor="let element of data">
           <td *ngIf="width < 500" class="border px-4 py-2">
             <button
