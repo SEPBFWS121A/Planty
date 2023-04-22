@@ -1,5 +1,4 @@
-<!--
-<div class="grid-cols-1">
+<div *ngIf="width > 500" class="grid-cols-1">
   <div class="grid grid-cols-5 gap-1 px-10 py-8">
     <div class="m-3">
       <div class="flex justify-center pl-3">
@@ -104,9 +103,8 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
--->
 
-<div class="px-4 py-8">
+<div *ngIf="width < 500" class="px-4 py-8">
   <form class="mb-6">
     <div class="mb-4">
       <label for="name" class="block text-gray-700 font-bold mb-2">
