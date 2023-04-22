@@ -1,0 +1,74 @@
+h1 {
+    padding: 2%;
+}
+
+h3 {
+    padding-left: 4%;
+}
+
+.plant-infos {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 90%;
+  }
+  
+  .plant-infos li {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .plant-infos button {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: stretch;
+    height: 1.8em;
+  }
+  
+  .plant-infos button:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+  }
+  
+  .plant-infos button:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .plant-infos button.selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .plant-infos button.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+  
+  .plant-infos button.selected:active {
+    background-color: black;
+    color: white;
+  }
+  
+  .plant-infos .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .plant-infos .name {
+    align-self: center;
+  }

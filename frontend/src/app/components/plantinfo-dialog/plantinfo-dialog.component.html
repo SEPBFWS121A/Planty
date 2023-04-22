@@ -1,0 +1,23 @@
+<h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">Plant Wiki</h1>
+
+<ul class="plant-infos">
+    <li *ngFor="let PlantInfo of PlantInfos">
+        <button [class.selected]="PlantInfo === selectedPlantInfo" type="button" (click)="onSelect(PlantInfo)">
+            <span class="badge">{{PlantInfo.common[0]}}</span>
+            <span class="name">{{PlantInfo.latin}}</span>
+        </button>
+    
+        <div class="infos" *ngIf="selectedPlantInfo && selectedPlantInfo === PlantInfo">
+            <div>
+                <h3 for="plant-info-name">Family: {{selectedPlantInfo.family}}</h3>
+                <h3 for="plant-info-name">Category: {{selectedPlantInfo.category}}</h3>
+                <h3 for="plant-info-name">Origin: {{selectedPlantInfo.origin}}</h3>
+                <h3 for="plant-info-name">Climate: {{selectedPlantInfo.climate}}</h3>
+                <h3 for="plant-info-name">Ideal Temperature: {{selectedPlantInfo.tempmin.celsius}}°C - {{selectedPlantInfo.tempmax.celsius}}°C</h3>
+                <h3 for="plant-info-name">Ideal Light: {{selectedPlantInfo.ideallight}}</h3>
+                <h3 for="plant-info-name">Tolerated Light: {{selectedPlantInfo.toleratedlight}}</h3>
+                <h3 for="plant-info-name">Watering: {{selectedPlantInfo.watering}}</h3>
+            </div>
+        </div>
+    </li>
+  </ul>

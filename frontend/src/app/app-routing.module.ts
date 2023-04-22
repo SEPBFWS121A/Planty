@@ -6,6 +6,7 @@ import { SensorManagementComponent } from './components/sensor-management/sensor
 import { CategoryManagementComponent } from './components/category-management/category-management.component';
 import { PlantManagementComponent } from './components/plant-management/plant-management.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { PlantInfoComponent } from './components/plantinfo-dialog/plantinfo-dialog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'category', component: CategoryManagementComponent },
   { path: 'plant', component: PlantManagementComponent },
   { path: 'notification', component: NotificationComponent },
+  { path: 'plant-info', component: PlantInfoComponent }
 ];
 
 @NgModule({
