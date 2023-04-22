@@ -57,7 +57,7 @@ import { Configuration } from '../configuration';
   providedIn: 'root',
 })
 export class DefaultService {
-  protected basePath = 'http://localhost:8080';
+  protected basePath = 'https://planty-test.schweren.dev';
   public defaultHeaders = new HttpHeaders();
   public configuration = new Configuration();
   public encoder: HttpParameterCodec;
