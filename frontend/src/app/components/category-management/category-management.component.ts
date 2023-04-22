@@ -16,8 +16,10 @@ export class CategoryManagementComponent implements OnInit {
     'delete',
   ];
   data: any;
-
+  width: number = 0;
+  tempDescription: string = '';
   category: PlantTypePayload = {};
+  showData: boolean = false;
 
   constructor(
     private defaultService: DefaultService // private apiService: ApiService
@@ -27,6 +29,7 @@ export class CategoryManagementComponent implements OnInit {
     this.defaultService.plantTypeGet().subscribe((result) => {
       this.data = result;
     });
+    this.width = window.innerWidth > 0 ? window.innerWidth : screen.width;
     // this.apiService.plantTypeGet().subscribe((result) => {
     //   this.data = result;
     // });
@@ -57,6 +60,15 @@ export class CategoryManagementComponent implements OnInit {
       error(msg) {
         console.log('Error posting category: ', msg);
       },
+    });
+  }
+
+  showMoreData(description: string) {
+    this.tempDescription = description;
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
     });
   }
 }
