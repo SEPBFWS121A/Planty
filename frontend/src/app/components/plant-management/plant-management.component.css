@@ -1,29 +1,92 @@
-.full-width-table {
+/*.full-width-table {*/
+/*    width: 100%;*/
+/*  }*/
+/*  .mat-column-id {*/
+/*    width: 10% !important;*/
+/*  }*/
+/*  .mat-column-name {*/
+/*    width: 20% !important;*/
+/*  }*/
+/*  .mat-column-description {*/
+/*    width: 50% !important;*/
+/*    padding-right: 15px;*/
+/*  }*/
+/*  .mat-column-category {*/
+/*    width: 10% !important;*/
+/*  }*/
+/*  .mat-column-sensor {*/
+/*    width: 10% !important;*/
+/*  }*/
+/*  .mat-column-delete {*/
+/*    color: red;*/
+/*    font-size: larger;*/
+/*    width: 10% !important;*/
+/*  }*/
+/*  .mat-column-delete:hover {*/
+/*    color: grey;*/
+/*    font-size: larger;*/
+/*    width: 10% !important;*/
+/*  }*/
+
+/* For screens smaller than 640px */
+
+@media (max-width: 640px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-cols-1 {
     width: 100%;
   }
-  .mat-column-id {
-    width: 10% !important;
+
+  .grid-cols-5 {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .mat-column-name {
-    width: 20% !important;
+
+  .m-3 {
+    margin: 10px 0;
   }
-  .mat-column-description {
-    width: 50% !important;
-    padding-right: 15px;
+
+  .w-full {
+    width: 100%;
   }
-  .mat-column-category {
-    width: 10% !important;
+
+  .form-control {
+    font-size: 16px;
+    padding: 12px;
   }
-  .mat-column-sensor {
-    width: 10% !important;
+
+  .mat-form-field {
+    width: 100%;
   }
-  .mat-column-delete {
-    color: red;
-    font-size: larger;
-    width: 10% !important;
+
+  .mat-select {
+    font-size: 16px;
+    padding: 12px;
   }
-  .mat-column-delete:hover {
-    color: grey;
-    font-size: larger;
-    width: 10% !important;
+
+  .mat-button {
+    font-size: 16px;
+    padding: 8px 16px;
   }
+}
+
+/* For screens between 640px and 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .grid-cols-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .m-3 {
+    margin: 10px;
+  }
+}
+
+/* For screens larger than 1024px */
+@media (min-width: 1024px) {
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

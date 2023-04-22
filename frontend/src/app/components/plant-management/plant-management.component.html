@@ -1,140 +1,146 @@
-<div class="grid-cols-1">
-  <div class="grid grid-cols-5 gap-1 px-10 py-8">
-    <div class="m-3">
-      <div class="flex justify-center pl-3">
-        <div class="mb-3 w-full">
-          <label
-            for="exampleFormControlInput1"
-            class="form-label inline-block mb-2 text-gray-700"
-            >Name</label
-          >
-          <input
-            #name
-            type="text"
-            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            placeholder="Name"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="m-3">
-      <div class="flex justify-center pl-3">
-        <div class="mb-3 w-full">
-          <label
-            for="exampleFormControlInput1"
-            class="form-label inline-block mb-2 text-gray-700"
-            >Description</label
-          >
-          <input
-            #description
-            type="text"
-            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            placeholder="Description"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="m-3">
-      <label
-        for="exampleFormControlInput1"
-        class="form-label inline-block mb-2 text-gray-700"
-        >Category</label
-      >
-
-      <div>
-        <mat-form-field appearance="outline" class="w-full">
-          <mat-label>Selected Category</mat-label>
-          <mat-select #category [formControl]="selectedFW">
-            <mat-option
-              *ngFor="let categorie of categoryNames"
-              [value]="categorie"
+<div class="container">
+  <div class="grid-cols-1">
+    <div class="grid grid-cols-5 gap-1 px-10 py-8">
+      <div class="m-3">
+        <div class="flex justify-center pl-3">
+          <div class="mb-3 w-full">
+            <label
+              for="exampleFormControlInput1"
+              class="form-label inline-block mb-2 text-gray-700"
+              >Name</label
             >
-              {{ categorie }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+            <input
+              #name
+              type="text"
+              class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Name"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="m-3">
-      <label
-        for="exampleFormControlInput1"
-        class="form-label inline-block mb-2 text-gray-700"
-        >Sensor</label
-      >
-      <div>
-        <mat-form-field appearance="outline" class="w-full">
-          <mat-label>Selected Sensor</mat-label>
-          <mat-select #sensor [formControl]="selectedFW">
-            <mat-option *ngFor="let sensor of sensorNames" [value]="sensor">
-              {{ sensor }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+      <div class="m-3">
+        <div class="flex justify-center pl-3">
+          <div class="mb-3 w-full">
+            <label
+              for="exampleFormControlInput1"
+              class="form-label inline-block mb-2 text-gray-700"
+              >Description</label
+            >
+            <input
+              #description
+              type="text"
+              class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Description"
+            />
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="m-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label inline-block mb-2 text-gray-700"
+          >Category</label
+        >
 
-    <div class="m-3">
-      <div class="flex justify-center pl-3">
-        <div class="mb-3 w-full">
-          <label
-            for="exampleFormControlInput1"
-            class="form-label inline-block mb-2 text-gray-700"
-            >Submit</label
-          >
-          <button
-            type="button"
-            class="bg-blue-500 hover:bg-blue-700 text-white text-base font-normal form-control block w-full px-3 py-3 mt-1 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
-            (click)="
-              savePlant(
-                name.value,
-                description.value,
-                category.value,
-                sensor.value
-              )
-            "
-          >
-            Add Plant
-          </button>
+        <div>
+          <mat-form-field appearance="outline" class="w-full">
+            <mat-label>Selected Category</mat-label>
+            <mat-select #category [formControl]="selectedFW">
+              <mat-option
+                *ngFor="let categorie of categoryNames"
+                [value]="categorie"
+              >
+                {{ categorie }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="m-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label inline-block mb-2 text-gray-700"
+          >Sensor</label
+        >
+        <div>
+          <mat-form-field appearance="outline" class="w-full">
+            <mat-label>Selected Sensor</mat-label>
+            <mat-select #sensor [formControl]="selectedFW">
+              <mat-option *ngFor="let sensor of sensorNames" [value]="sensor">
+                {{ sensor }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="m-3">
+        <div class="flex justify-center pl-3">
+          <div class="mb-3 w-full">
+            <label
+              for="exampleFormControlInput1"
+              class="form-label inline-block mb-2 text-gray-700"
+              >Submit</label
+            >
+            <button
+              type="button"
+              class="bg-blue-500 hover:bg-blue-700 text-white text-base font-normal form-control block w-full px-3 py-3 mt-1 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
+              (click)="
+                savePlant(
+                  name.value,
+                  description.value,
+                  category.value,
+                  sensor.value
+                )
+              "
+            >
+              Add Plant
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+<div class="mat-elevation-z8 mat-table-container">
+    <table mat-table [dataSource]="plants" class="mat-table">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td #id mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Category</th>
+        <td mat-cell *matCellDef="let element">{{ element.plantTypeId }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="sensor">
+        <th mat-header-cell *matHeaderCellDef>Sensor</th>
+        <td mat-cell *matCellDef="let element">{{ element.sensorId }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button (click)="deleteItem(element)">Delete</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
   </div>
 
-  <table mat-table [dataSource]="plants" class="mat-elevation-z8">
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>Id</th>
-      <td #id mat-cell *matCellDef="let element">{{ element.id }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef>Description</th>
-      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef>Category</th>
-      <td mat-cell *matCellDef="let element">{{ element.plantTypeId }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="sensor">
-      <th mat-header-cell *matHeaderCellDef>Sensor</th>
-      <td mat-cell *matCellDef="let element">{{ element.sensorId }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="delete">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="deleteItem(element)">Delete</button>
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
 </div>
+

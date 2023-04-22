@@ -1,0 +1,40 @@
+  .flex {
+    display: flex;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    .flex {
+      flex-direction: row;
+    }
+    .w-full {
+      width: 50%;
+    }
+    .mt-4 {
+      margin-top: 0;
+      margin-left: 4rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-5xl {
+      font-size: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-5xl {
+      font-size: 5rem;
+    }
+  }
