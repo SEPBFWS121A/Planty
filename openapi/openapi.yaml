@@ -599,6 +599,36 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
+  /sensor/by-hardware-id/{hardwareId}:
+    parameters:
+      - name: hardwareId
+        description: "Specific hardware ID of the sensor to access."
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: "Get a single sensor."
+      description: "Retrieves a single sensor based on a given hardware specific ID."
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/sensor"
+        "404":
+          description: "No sensor with the given hardware specific ID was found."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/errorMessage"
+        "503":
+          description: "The service is unavailable."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/errorMessage"
 components:
   schemas:
     # API-related schemas
@@ -629,6 +659,11 @@ components:
       type: integer
       minimum: 0
       example: 420
+    hardwareId:
+      description: "The hardware specific ID of a sensor."
+      type: string
+      maxLength: 50
+      example: "ESP32-420"
     entityName:
       description: "A name of an entity"
       type: string
@@ -758,6 +793,8 @@ components:
       properties:
         id:
           $ref: "#/components/schemas/entityId"
+        hardwareId:
+          $ref: "#/components/schemas/hardwareId"
         name:
           $ref: "#/components/schemas/entityName"
         description:
@@ -777,6 +814,8 @@ components:
     sensorPayload:
       type: object
       properties:
+        hardwareId:
+          $ref: "#/components/schemas/hardwareId"
         name:
           $ref: "#/components/schemas/entityName"
         description:

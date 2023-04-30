@@ -36,6 +36,7 @@ export class SensorManagementComponent implements OnInit {
   }
 
   async saveSensor(
+    hardwareId: string,
     name: string,
     description: string
     // humidityScalingFrom: string,
@@ -43,6 +44,7 @@ export class SensorManagementComponent implements OnInit {
     // lastCalibration: string,
     // sleepTimeout: string
   ) {
+    this.sensor.hardwareId = hardwareId;
     this.sensor.name = name;
     this.sensor.description = description;
 

@@ -14,6 +14,7 @@ public class SensorEntityMapper extends EntityMapperBase<EntitySensor, GenSensor
     public GenSensor mapPanacheEntity(EntitySensor panacheEntity) {
         GenSensor genSensor = new GenSensor();
         genSensor.setId(panacheEntity.getId());
+        genSensor.setHardwareId(panacheEntity.getHardwareId());
         genSensor.setName(panacheEntity.getName());
         genSensor.setDescription(panacheEntity.getDescription());
         genSensor.setHumidityScalingFrom(panacheEntity.getHumidityScalingFrom());
@@ -26,6 +27,7 @@ public class SensorEntityMapper extends EntityMapperBase<EntitySensor, GenSensor
     @Override
     public EntitySensor mapGenEntity(GenSensor genEntity) {
         EntitySensor entitySensor = new EntitySensor();
+        entitySensor.setHardwareId(genEntity.getHardwareId());
         entitySensor.setName(genEntity.getName());
         entitySensor.setDescription(genEntity.getDescription());
         entitySensor.setHumidityScalingFrom(genEntity.getHumidityScalingFrom());
@@ -38,6 +40,7 @@ public class SensorEntityMapper extends EntityMapperBase<EntitySensor, GenSensor
     @Override
     public EntitySensor mapPayload(GenSensorPayload payload) {
         EntitySensor entitySensor = new EntitySensor();
+        entitySensor.setHardwareId(payload.getHardwareId());
         entitySensor.setName(payload.getName());
         entitySensor.setDescription(payload.getDescription());
         entitySensor.setHumidityScalingFrom(0);

@@ -15,8 +15,28 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonTypeName("sensorPayload")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class GenSensorPayload   {
+  private @Valid String hardwareId;
   private @Valid String name;
   private @Valid String description;
+
+  /**
+   * The hardware specific ID of a sensor.
+   **/
+  public GenSensorPayload hardwareId(String hardwareId) {
+    this.hardwareId = hardwareId;
+    return this;
+  }
+
+  
+  @JsonProperty("hardwareId")
+ @Size(max=50)  public String getHardwareId() {
+    return hardwareId;
+  }
+
+  @JsonProperty("hardwareId")
+  public void setHardwareId(String hardwareId) {
+    this.hardwareId = hardwareId;
+  }
 
   /**
    * A name of an entity
@@ -66,13 +86,14 @@ public class GenSensorPayload   {
       return false;
     }
     GenSensorPayload sensorPayload = (GenSensorPayload) o;
-    return Objects.equals(this.name, sensorPayload.name) &&
+    return Objects.equals(this.hardwareId, sensorPayload.hardwareId) &&
+        Objects.equals(this.name, sensorPayload.name) &&
         Objects.equals(this.description, sensorPayload.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description);
+    return Objects.hash(hardwareId, name, description);
   }
 
   @Override
@@ -80,6 +101,7 @@ public class GenSensorPayload   {
     StringBuilder sb = new StringBuilder();
     sb.append("class GenSensorPayload {\n");
     
+    sb.append("    hardwareId: ").append(toIndentedString(hardwareId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");

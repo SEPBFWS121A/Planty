@@ -13,6 +13,10 @@
 
 export interface SensorPayload { 
     /**
+     * The hardware specific ID of a sensor.
+     */
+    hardwareId?: string;
+    /**
      * A name of an entity
      */
     name?: string;
