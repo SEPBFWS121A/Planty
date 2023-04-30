@@ -35,6 +35,24 @@
         </div>
       </div>
     </div>
+
+    <div class="m-3">
+      <div class="flex justify-center pl-3">
+        <div class="mb-3 w-full">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Hardware-ID</label
+          >
+          <input
+            #hardwareId
+            type="text"
+            class="form-control block w-full px-3 py-3 mt-1 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Hardware-ID"
+          />
+        </div>
+      </div>
+    </div>
     <!-- 
     <div class="m-3">
       <div class="flex justify-center pl-3">
@@ -116,7 +134,9 @@
           <button
             type="button"
             class="bg-blue-500 hover:bg-blue-700 text-white text-base font-normal form-control block w-full px-3 py-3 mt-1 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
-            (click)="saveSensor(name.value, description.value)"
+            (click)="
+              saveSensor(hardwareId.value, name.value, description.value)
+            "
           >
             Add Sensor
           </button>
