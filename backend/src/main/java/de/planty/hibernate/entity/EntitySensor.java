@@ -13,6 +13,7 @@ public class EntitySensor extends PanacheEntityBase {
     @SequenceGenerator(name = "guidelineSequence", sequenceName = "guideline_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "guidelineSequence")
     private @Valid Integer id;
+    private @Valid String hardwareId;
     private @Valid String name;
     private @Valid String description;
     private @Valid Integer humidityScalingFrom;
@@ -26,6 +27,14 @@ public class EntitySensor extends PanacheEntityBase {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getHardwareId() {
+        return hardwareId;
+    }
+
+    public void setHardwareId(String hardwareID) {
+        this.hardwareId = hardwareID;
     }
 
     public String getName() {
