@@ -20,6 +20,11 @@ import javax.validation.Valid;
 public interface SensorApi {
 
     @GET
+    @Path("/by-hardware-id/{hardwareId}")
+    @Produces({ "application/json" })
+    Response sensorByHardwareIdHardwareIdGet(@PathParam("hardwareId") String hardwareId);
+
+    @GET
     @Produces({ "application/json" })
     Response sensorGet();
 

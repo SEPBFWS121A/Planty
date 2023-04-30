@@ -17,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class GenSensor   {
   private @Valid Integer id;
+  private @Valid String hardwareId;
   private @Valid String name;
   private @Valid String description;
   private @Valid Integer humidityScalingFrom;
@@ -42,6 +43,25 @@ public class GenSensor   {
   @JsonProperty("id")
   public void setId(Integer id) {
     this.id = id;
+  }
+
+  /**
+   * The hardware specific ID of a sensor.
+   **/
+  public GenSensor hardwareId(String hardwareId) {
+    this.hardwareId = hardwareId;
+    return this;
+  }
+
+  
+  @JsonProperty("hardwareId")
+ @Size(max=50)  public String getHardwareId() {
+    return hardwareId;
+  }
+
+  @JsonProperty("hardwareId")
+  public void setHardwareId(String hardwareId) {
+    this.hardwareId = hardwareId;
   }
 
   /**
@@ -169,6 +189,7 @@ public class GenSensor   {
     }
     GenSensor sensor = (GenSensor) o;
     return Objects.equals(this.id, sensor.id) &&
+        Objects.equals(this.hardwareId, sensor.hardwareId) &&
         Objects.equals(this.name, sensor.name) &&
         Objects.equals(this.description, sensor.description) &&
         Objects.equals(this.humidityScalingFrom, sensor.humidityScalingFrom) &&
@@ -179,7 +200,7 @@ public class GenSensor   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, description, humidityScalingFrom, humidityScalingTo, lastCalibration, sleepTimeout);
+    return Objects.hash(id, hardwareId, name, description, humidityScalingFrom, humidityScalingTo, lastCalibration, sleepTimeout);
   }
 
   @Override
@@ -188,6 +209,7 @@ public class GenSensor   {
     sb.append("class GenSensor {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    hardwareId: ").append(toIndentedString(hardwareId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    humidityScalingFrom: ").append(toIndentedString(humidityScalingFrom)).append("\n");
