@@ -45,6 +45,13 @@ public class SensorApiImpl implements SensorApi {
     @Transactional
     public Response sensorPost(GenSensorPayload genSensorPayload) {
         EntitySensor entitySensor = SensorEntityMapper.getInstance().mapPayload(genSensorPayload);
+
+        if(entitySensor.getHardwareId() == null)
+            return new ErrorResponseBuilder()
+                    .setStatusCode(400)
+                    .setMessage("hardwareId is required.")
+                    .build();
+
         entitySensor.persist();
         return Response
                 .created(URI.create(String.format("/sensor/%d", entitySensor.getId())))
