@@ -26,6 +26,22 @@ public class SensorApiImpl implements SensorApi {
     }
 
     @Override
+    public Response sensorByHardwareIdHardwareIdGet(String hardwareId) {
+        EntitySensor entitySensor = EntitySensor.find("hardwareId", hardwareId).firstResult();
+        if(entitySensor == null)
+            return new ErrorResponseBuilder()
+                    .setStatusCode(404)
+                    .setMessage(String.format("No sensor found for hardwareId %s", hardwareId))
+                    .build();
+
+        GenSensor genSensor = SensorEntityMapper.getInstance().mapPanacheEntity(entitySensor);
+        return Response
+                .ok()
+                .entity(genSensor)
+                .build();
+    }
+
+    @Override
     @Transactional
     public Response sensorPost(GenSensorPayload genSensorPayload) {
         EntitySensor entitySensor = SensorEntityMapper.getInstance().mapPayload(genSensorPayload);
