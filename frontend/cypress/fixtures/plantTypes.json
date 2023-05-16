@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Sunflower",
+        "description": "Draws energy during the day, but loses energy at night. +5 Energy/minute at day, -3.25 Energy/minute at night."
+    },
+    {
+        "name": "Tulip",
+        "description": "A family of flowers that originated from Turkey."
+    }
+]
