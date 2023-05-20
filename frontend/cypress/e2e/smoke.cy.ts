@@ -1,8 +1,9 @@
 import { forEach } from 'cypress/types/lodash';
-describe('Pie Chart Existence Test', () => {
+describe('Home Page existance test', () => {
   // Hinzufügen von Daten in die Datenbank
 
-  it('POST-Anfrage mit Fixture-Daten', () => {
+  //Integration Test tests two components the backend and the database
+  it('DELETE- and POST-Anfrage mit Fixture-Daten', () => {
     // Lösche alle Daten aus der Datenbank
     cy.request('http://localhost:8080/plant').then((response) => {
       for (let i = 0; i < response.body.length; i++) {
@@ -125,6 +126,7 @@ describe('Pie Chart Existence Test', () => {
         expect(response.status).to.eq(201);
       });
     });
+    // post moistureRecords for plants
     cy.request('http://localhost:8080/plant').then((response) => {
       for (let i = 0; i < response.body.length; i++) {
         for (let j = 1; j <= 9; j++) {
@@ -150,9 +152,22 @@ describe('Pie Chart Existence Test', () => {
     cy.visit('http://localhost:4200/');
   });
 
-  // ANFANG DER TESTS
-  it('should display pie chart', () => {
-    // Überprüfe, ob das Element mit der ID "Bettypie" existiert
+  // Unit test tests the functionality of on function of the frontend
+  it('should display first sunflower image', () => {
+    cy.get('img:first').should(
+      'have.attr',
+      'src',
+      'https://openmoji.org/data/color/svg/1F33B.svg'
+    );
+  });
+  //System test tests the functionality of the whole system
+  it('should display first plant headline', () => {
+    cy.get('h1:first').should('contain', 'Betty');
+  });
+  it('should display first plant line chart', () => {
+    cy.get('#Bettyline').should('exist');
+  });
+  it('should display first plant pie chart', () => {
     cy.get('#Bettypie').should('exist');
   });
 });
