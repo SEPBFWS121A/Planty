@@ -49,12 +49,13 @@ export class LineChartComponent implements OnInit {
       .moistureRecordByPlantPlantIdGet(this.plantID)
       .subscribe((result) => {
         this.plantData = result;
+        console.log(this.plantData);
         if (this.plantData != null) {
-          for (
-            let i = this.plantData.length - 20;
-            i < this.plantData.length;
-            i++
-          ) {
+          console.log('AUSGABE: ' + this.plantData.length);
+          let i = 0;
+          if (this.plantData.length > 20) i = this.plantData.length - 20;
+          for (i; i < this.plantData.length; i++) {
+            console.log('AUSGABE: ' + this.plantData[i].timestamp);
             this.lableData.push(this.plantData[i].timestamp.substring(0, 10));
             this.moistureData.push(this.plantData[i].humidityLevel);
           }

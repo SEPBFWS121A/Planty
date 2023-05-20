@@ -1,8 +1,8 @@
-{
-    "name": "Betty",
-    "description": "Betty was your first sunflower. By the help of Planty, you managed to keep her alive ever since.",
-    "plantTypeId": 1,
-    "sensorId": 1,
-    "roomId": 1
+  {
+    "name": "Cassandra",
+    "description": "Cassandra is a proud tulip.",
+    "plantTypeId": 2,
+    "sensorId": 2,
+    "roomId": 2
   }
 
