@@ -3,7 +3,7 @@ describe('Home Page existance test', () => {
   // Hinzufügen von Daten in die Datenbank
 
   //Integration Test tests two components the backend and the database
-  it('DELETE- and POST-Anfrage mit Fixture-Daten', () => {
+  before('DELETE- and POST-Anfrage mit Fixture-Daten', () => {
     // Lösche alle Daten aus der Datenbank
     cy.request('http://localhost:8080/plant').then((response) => {
       for (let i = 0; i < response.body.length; i++) {
