@@ -1,6 +1,6 @@
 ---
 name: Test request (Developer)
-about: Suggest an idea for this project
+about: Add missing test to the project
 title: "[TEST] "
 labels: test
 assignees: ''
