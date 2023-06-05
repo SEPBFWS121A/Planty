@@ -36,11 +36,12 @@ public class PlantTypeApiImpl implements PlantTypeApi {
         }
 
         EntityPlantType entityPlantType = EntityPlantType.findById(id);
-        if(entityPlantType == null)
+        if (entityPlantType == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No plant type found for plantTypeId %s", plantTypeId))
                     .build();
+        }
 
         entityPlantType.delete();
         return Response
@@ -60,11 +61,12 @@ public class PlantTypeApiImpl implements PlantTypeApi {
         }
 
         EntityPlantType entityPlantType = EntityPlantType.findById(id);
-        if(entityPlantType == null)
+        if(entityPlantType == null){
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No plant type found for plantTypeId %s", plantTypeId))
                     .build();
+        }
 
         GenPlantType genPlantType = PlantTypeEntityMapper.getInstance().mapPanacheEntity(entityPlantType);
 
@@ -77,6 +79,24 @@ public class PlantTypeApiImpl implements PlantTypeApi {
     @Override
     @Transactional
     public Response plantTypePost(GenPlantTypePayload genPlantTypePayload) {
+        if (genPlantTypePayload.getName() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("name of a plant type must be set.")
+                    .build();
+        }
+
+        if (genPlantTypePayload.getDescription() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("description of a plant type must be set.")
+                    .build();
+        }
+        
+        if (genPlantTypePayload.getMinHumidityLevel() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("minHumidityLevel of a plant type must be set.")
+                    .build();
+        }
+        
         EntityPlantType entityPlantType = PlantTypeEntityMapper.getInstance().mapPayload(genPlantTypePayload);
         entityPlantType.persist();
         return Response

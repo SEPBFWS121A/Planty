@@ -35,12 +35,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/moistureRecords"
-        "503":
-          description: "The service is unavailable."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
     post:
       summary: "Post a moisture record."
       description: "Create a new moisture record."
@@ -55,12 +49,6 @@ paths:
           description: "Created"
         "400":
           description: "The given moisture record was invalid."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -83,20 +71,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/moistureRecord"
-        "404":
-          description: "No moisture record with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "moistureRecordId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No moisture record with the given ID was found."
           content:
             application/json:
               schema:
@@ -107,20 +89,14 @@ paths:
       responses:
         "200":
           description: "OK"
-        "404":
-          description: "No moisture record with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "moistureRecordId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No moisture record with the given ID was found."
           content:
             application/json:
               schema:
@@ -143,14 +119,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/moistureRecords"
-        "500":
+        "400":
           description: "plantId could not be parsed to an integer value."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -167,12 +137,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/plants"
-        "503":
-          description: "The service is unavailable."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
     post:
       summary: "Post a plant."
       description: "Create a new plant."
@@ -187,12 +151,6 @@ paths:
           description: "Created"
         "400":
           description: "The given plant was invalid."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -215,20 +173,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/plant"
-        "404":
-          description: "No plant with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "plantId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No plant with the given ID was found."
           content:
             application/json:
               schema:
@@ -239,20 +191,14 @@ paths:
       responses:
         "200":
           description: "OK"
-        "404":
-          description: "No plant with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "plantId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No plant with the given ID was found."
           content:
             application/json:
               schema:
@@ -269,12 +215,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/plantTypes"
-        "503":
-          description: "The service is unavailable."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
     post:
       summary: "Post a plant type."
       description: "Create a new plant type."
@@ -289,12 +229,6 @@ paths:
           description: "Created"
         "400":
           description: "The given plant type was invalid."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -317,20 +251,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/plantType"
-        "404":
-          description: "No plant type with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "plantTypeId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No plant type with the given ID was found."
           content:
             application/json:
               schema:
@@ -341,20 +269,14 @@ paths:
       responses:
         "200":
           description: "OK"
-        "404":
-          description: "No plant type with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "plantTypeId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No plant type with the given ID was found."
           content:
             application/json:
               schema:
@@ -371,12 +293,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rooms"
-        "503":
-          description: "The service is unavailable."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
     post:
       summary: "Post a room."
       description: "Create a new room."
@@ -391,12 +307,6 @@ paths:
           description: "Created"
         "400":
           description: "The given room was invalid."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -419,20 +329,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/room"
-        "404":
-          description: "No room with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "roomId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No room with the given ID was found."
           content:
             application/json:
               schema:
@@ -443,20 +347,14 @@ paths:
       responses:
         "200":
           description: "OK"
-        "404":
-          description: "No room with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "roomId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No room with the given ID was found."
           content:
             application/json:
               schema:
@@ -473,12 +371,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/sensors"
-        "503":
-          description: "The service is unavailable."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
     post:
       summary: "Post a sensor."
       description: "Create a new sensor."
@@ -493,12 +385,6 @@ paths:
           description: "Created"
         "400":
           description: "The given sensor was invalid."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -521,20 +407,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/sensor"
-        "404":
-          description: "No sensor with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "sensorId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No sensor with the given ID was found."
           content:
             application/json:
               schema:
@@ -545,20 +425,14 @@ paths:
       responses:
         "200":
           description: "OK"
-        "404":
-          description: "No sensor with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
+        "400":
           description: "sensorId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
+        "404":
+          description: "No sensor with the given ID was found."
           content:
             application/json:
               schema:
@@ -576,25 +450,13 @@ paths:
         "200":
           description: "OK"
         "400":
-          description: "The given sensor was invalid."
+          description: "The given sensor was invalid or sensorId could not be parsed to an integer value."
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorMessage"
         "404":
           description: "No sensor with the given ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "500":
-          description: "sensorId could not be parsed to an integer value."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
@@ -619,12 +481,6 @@ paths:
                 $ref: "#/components/schemas/sensor"
         "404":
           description: "No sensor with the given hardware specific ID was found."
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-        "503":
-          description: "The service is unavailable."
           content:
             application/json:
               schema:
