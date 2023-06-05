@@ -4,6 +4,7 @@ import de.planty.gen.api.MoistureRecordApi;
 import de.planty.gen.model.GenMoistureRecord;
 import de.planty.gen.model.GenMoistureRecordPayload;
 import de.planty.hibernate.entity.EntityMoistureRecord;
+import de.planty.hibernate.entity.EntityPlant;
 import de.planty.hibernate.mapper.MoistureRecordEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
 
@@ -93,6 +94,14 @@ public class MoistureRecordApiImpl implements MoistureRecordApi {
 
         if (genMoistureRecordPayload.getTimestamp() == null) {
             genMoistureRecordPayload.setTimestamp(new Date());
+        }
+
+        EntityPlant entityPlant = EntityPlant.findById(genMoistureRecordPayload.getPlantId());
+        if(entityPlant == null) {
+            return new ErrorResponseBuilder()
+                    .setStatusCode(404)
+                    .setMessage(String.format("No plant found for plantId %d", genMoistureRecordPayload.getPlantId()))
+                    .build();
         }
 
         EntityMoistureRecord entityMoistureRecord = MoistureRecordEntityMapper.getInstance().mapPayload(genMoistureRecordPayload);
