@@ -631,6 +631,37 @@ paths:
                 $ref: "#/components/schemas/errorMessage"
 components:
   schemas:
+    # Base schemas
+    timestamp:
+      description: "A timestamp containing date and time."
+      type: string
+      format: date-time
+    humidityLevel:
+      description: "Humidity level reported by a sensor scaled from 0 to 100."
+      type: integer
+      minimum: 0
+      maximum: 100
+      example: 69
+    entityId:
+      description: "The ID schema used for most database entities."
+      type: integer
+      minimum: 0
+      example: 420
+    entityName:
+      description: "A name of an entity"
+      type: string
+      maxLength: 50
+      example: "Sensor 1"
+    entityDescription:
+      description: "A description of an entity"
+      type: string
+      maxLength: 50
+      example: "The blue ESP32 sensor"
+    hardwareId:
+      description: "The hardware specific ID of a sensor."
+      type: string
+      maxLength: 50
+      example: "ESP32-420"
     # API-related schemas
     errorMessage:
       description: "A json object containing a text message describing an error."
@@ -642,65 +673,8 @@ components:
           maxLength: 256
           example: "The database is not responding."
       example: '{ "message": "The database is not responding." }'
-    # Basic schemas
-    timestamp:
-      description: "A timestamp containing date and time."
-      type: string
-      format: date-time
-    humidityLevel:
-      description: "Humidity level reported by a sensor scaled from 0 to 100."
-      type: integer
-      minimum: 0
-      maximum: 100
-      example: 69
-    # Entity-related schemas
-    entityId:
-      description: "The ID schema used for most database entities."
-      type: integer
-      minimum: 0
-      example: 420
-    hardwareId:
-      description: "The hardware specific ID of a sensor."
-      type: string
-      maxLength: 50
-      example: "ESP32-420"
-    entityName:
-      description: "A name of an entity"
-      type: string
-      maxLength: 50
-      example: "Sensor 1"
-    entityDescription:
-      description: "A description of an entity"
-      type: string
-      maxLength: 50
-      example: "The blue ESP32 sensor"
-    # Moisture Record-related schemas
-    moistureRecord:
-      type: object
-      properties:
-        id:
-          $ref: "#/components/schemas/entityId"
-        timestamp:
-          $ref: "#/components/schemas/timestamp"
-        humidityLevel:
-          $ref: "#/components/schemas/humidityLevel"
-        plantId:
-          $ref: "#/components/schemas/entityId"
-    moistureRecords:
-      type: array
-      items:
-        $ref: "#/components/schemas/moistureRecord"
-    moistureRecordPayload:
-      type: object
-      properties:
-        timestamp:
-          $ref: "#/components/schemas/timestamp"
-        humidityLevel:
-          $ref: "#/components/schemas/humidityLevel"
-        plantId:
-          $ref: "#/components/schemas/entityId"
-    # Plant-related schemas
-    plant:
+    # Room-related schemas
+    room:
       type: object
       properties:
         id:
@@ -709,29 +683,17 @@ components:
           $ref: "#/components/schemas/entityName"
         description:
           $ref: "#/components/schemas/entityDescription"
-        plantTypeId:
-          $ref: "#/components/schemas/entityId"
-        sensorId:
-          $ref: "#/components/schemas/entityId"
-        roomId:
-          $ref: "#/components/schemas/entityId"
-    plants:
+    rooms:
       type: array
       items:
-        $ref: "#/components/schemas/plant"
-    plantPayload:
+        $ref: "#/components/schemas/room"
+    roomPayload:
       type: object
       properties:
         name:
           $ref: "#/components/schemas/entityName"
         description:
           $ref: "#/components/schemas/entityDescription"
-        plantTypeId:
-          $ref: "#/components/schemas/entityId"
-        sensorId:
-          $ref: "#/components/schemas/entityId"
-        roomId:
-          $ref: "#/components/schemas/entityId"
     # Plant Type-related schemas
     plantType:
       type: object
@@ -757,27 +719,6 @@ components:
           $ref: "#/components/schemas/entityDescription"
         minHumidityLevel:
           $ref: "#/components/schemas/humidityLevel"
-    # Room-related schemas
-    room:
-      type: object
-      properties:
-        id:
-          $ref: "#/components/schemas/entityId"
-        name:
-          $ref: "#/components/schemas/entityName"
-        description:
-          $ref: "#/components/schemas/entityDescription"
-    rooms:
-      type: array
-      items:
-        $ref: "#/components/schemas/room"
-    roomPayload:
-      type: object
-      properties:
-        name:
-          $ref: "#/components/schemas/entityName"
-        description:
-          $ref: "#/components/schemas/entityDescription"
     # Sensor-related schemas
     sensorSleepTimeout:
       description: "Timeout in minutes for the sensor to sleep in between taking measurements"
@@ -829,3 +770,61 @@ components:
           $ref: "#/components/schemas/sensorHumidityScalingTo"
         sleepTimeout:
           $ref: "#/components/schemas/sensorSleepTimeout"
+    # Plant-related schemas
+    plant:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/schemas/entityId"
+        name:
+          $ref: "#/components/schemas/entityName"
+        description:
+          $ref: "#/components/schemas/entityDescription"
+        plantTypeId:
+          $ref: "#/components/schemas/entityId"
+        sensorId:
+          $ref: "#/components/schemas/entityId"
+        roomId:
+          $ref: "#/components/schemas/entityId"
+    plants:
+      type: array
+      items:
+        $ref: "#/components/schemas/plant"
+    plantPayload:
+      type: object
+      properties:
+        name:
+          $ref: "#/components/schemas/entityName"
+        description:
+          $ref: "#/components/schemas/entityDescription"
+        plantTypeId:
+          $ref: "#/components/schemas/entityId"
+        sensorId:
+          $ref: "#/components/schemas/entityId"
+        roomId:
+          $ref: "#/components/schemas/entityId"
+    # Moisture Record-related schemas
+    moistureRecord:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/schemas/entityId"
+        timestamp:
+          $ref: "#/components/schemas/timestamp"
+        humidityLevel:
+          $ref: "#/components/schemas/humidityLevel"
+        plantId:
+          $ref: "#/components/schemas/entityId"
+    moistureRecords:
+      type: array
+      items:
+        $ref: "#/components/schemas/moistureRecord"
+    moistureRecordPayload:
+      type: object
+      properties:
+        timestamp:
+          $ref: "#/components/schemas/timestamp"
+        humidityLevel:
+          $ref: "#/components/schemas/humidityLevel"
+        plantId:
+          $ref: "#/components/schemas/entityId"
