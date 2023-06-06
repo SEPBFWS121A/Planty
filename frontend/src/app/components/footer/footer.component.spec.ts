@@ -17,4 +17,10 @@ describe('FooterComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  it('should contain the GitHub link', () => {
+    const bannerElement: HTMLElement = fixture.nativeElement;
+    const a = bannerElement.querySelectorAll('a')!;
+    expect(a.item(a.length - 1).href).toEqual('https://github.com/SEPBFWS121A/Planty');
+  });
 });
