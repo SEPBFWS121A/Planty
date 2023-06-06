@@ -1,4 +1,10 @@
-# Planty [![Test, build and deploy](https://github.com/SEPBFWS121A/Planty/actions/workflows/main.yml/badge.svg)](https://github.com/SEPBFWS121A/Planty/actions/workflows/main.yml)
+# Planty
+
+## Pipelines
+
+Backend: [![Test, build and deploy](https://github.com/SEPBFWS121A/Planty/actions/workflows/main.yml/badge.svg)](https://github.com/SEPBFWS121A/Planty/actions/workflows/main.yml)
+
+Frontend: [![Test, build and deploy](https://github.com/SEPBFWS121A/Planty/actions/workflows/frontend.yml/badge.svg)](https://github.com/SEPBFWS121A/Planty/actions/workflows/frontend.yml)
 
 ## Start Backend and Frontend
 
@@ -7,16 +13,16 @@
 
 ## Running unit tests frontend
 
-go to cd frontend
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Go into frontend directory
+- Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running integration tests frontend
 
-go to cd frontend
-Run `npm mocha`to execute integration tests via mocha
+- Go into frontend directory
+- Run `npm mocha`to execute integration tests via mocha
 
 ## Running System tests frontend
 
-start backend and frontend
-go to cd frontend
-Run `npx cypress open`to execure system tests via cypress
+- Start backend and frontend
+- Go into frontend directory
+- Run `npx cypress open`to execure system tests via cypress
