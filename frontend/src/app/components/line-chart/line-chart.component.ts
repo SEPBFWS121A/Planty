@@ -50,11 +50,9 @@ export class LineChartComponent implements OnInit {
       .subscribe((result) => {
         this.plantData = result;
         if (this.plantData != null) {
-          for (
-            let i = this.plantData.length - 20;
-            i < this.plantData.length;
-            i++
-          ) {
+          let i = 0;
+          if (this.plantData.length > 20) i = this.plantData.length - 20;
+          for (i; i < this.plantData.length; i++) {
             this.lableData.push(this.plantData[i].timestamp.substring(0, 10));
             this.moistureData.push(this.plantData[i].humidityLevel);
           }

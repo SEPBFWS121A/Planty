@@ -8,9 +8,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [HeaderComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,9 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have img sunflower', () => {
+    const bannerElement: HTMLElement = fixture.nativeElement;
+    const img = bannerElement.querySelector('img')!;
+    expect(img.src).toEqual('https://openmoji.org/data/color/svg/1F33B.svg');
   });
 });
