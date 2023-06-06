@@ -4,12 +4,14 @@ import de.planty.gen.api.MoistureRecordApi;
 import de.planty.gen.model.GenMoistureRecord;
 import de.planty.gen.model.GenMoistureRecordPayload;
 import de.planty.hibernate.entity.EntityMoistureRecord;
+import de.planty.hibernate.entity.EntityPlant;
 import de.planty.hibernate.mapper.MoistureRecordEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.core.Response;
 import java.net.URI;
+import java.util.Date;
 import java.util.List;
 
 public class MoistureRecordApiImpl implements MoistureRecordApi {
@@ -36,11 +38,12 @@ public class MoistureRecordApiImpl implements MoistureRecordApi {
         }
 
         EntityMoistureRecord entityMoistureRecord = EntityMoistureRecord.findById(id);
-        if(entityMoistureRecord == null)
+        if(entityMoistureRecord == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No moisture record found for moistureRecordId %s", moistureRecordId))
                     .build();
+        }
 
         entityMoistureRecord.delete();
         return Response
@@ -60,14 +63,14 @@ public class MoistureRecordApiImpl implements MoistureRecordApi {
         }
 
         EntityMoistureRecord entityMoistureRecord = EntityMoistureRecord.findById(id);
-        if(entityMoistureRecord == null)
+        if(entityMoistureRecord == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No moisture record found for moistureRecordId %s", moistureRecordId))
                     .build();
+        }
 
         GenMoistureRecord genMoistureRecord = MoistureRecordEntityMapper.getInstance().mapPanacheEntity(entityMoistureRecord);
-
         return Response
                 .ok()
                 .entity(genMoistureRecord)
@@ -77,6 +80,30 @@ public class MoistureRecordApiImpl implements MoistureRecordApi {
     @Override
     @Transactional
     public Response moistureRecordPost(GenMoistureRecordPayload genMoistureRecordPayload) {
+        if(genMoistureRecordPayload.getHumidityLevel() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("humidityLevel of moisture record must be set.")
+                    .build();
+        }
+        
+        if (genMoistureRecordPayload.getPlantId() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("plantId of moisture record must be set.")
+                    .build();
+        }
+
+        if (genMoistureRecordPayload.getTimestamp() == null) {
+            genMoistureRecordPayload.setTimestamp(new Date());
+        }
+
+        EntityPlant entityPlant = EntityPlant.findById(genMoistureRecordPayload.getPlantId());
+        if(entityPlant == null) {
+            return new ErrorResponseBuilder()
+                    .setStatusCode(404)
+                    .setMessage(String.format("No plant found for plantId %d", genMoistureRecordPayload.getPlantId()))
+                    .build();
+        }
+
         EntityMoistureRecord entityMoistureRecord = MoistureRecordEntityMapper.getInstance().mapPayload(genMoistureRecordPayload);
         entityMoistureRecord.persist();
         return Response

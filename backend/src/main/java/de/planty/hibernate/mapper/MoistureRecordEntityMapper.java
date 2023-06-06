@@ -31,14 +31,8 @@ public class MoistureRecordEntityMapper extends EntityMapperBase<EntityMoistureR
 
     @Override
     public EntityMoistureRecord mapPayload(GenMoistureRecordPayload genMoistureRecordPayload) {
-        Date timestamp;
-        if(genMoistureRecordPayload.getTimestamp() == null)
-            timestamp = new Date();
-        else
-            timestamp = genMoistureRecordPayload.getTimestamp();
-
         EntityMoistureRecord entityMoistureRecord = new EntityMoistureRecord();
-        entityMoistureRecord.setTimestamp(timestamp);
+        entityMoistureRecord.setTimestamp(genMoistureRecordPayload.getTimestamp());
         entityMoistureRecord.setHumidityLevel(genMoistureRecordPayload.getHumidityLevel());
         entityMoistureRecord.setPlantId(genMoistureRecordPayload.getPlantId());
         return entityMoistureRecord;

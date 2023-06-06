@@ -4,6 +4,9 @@ import de.planty.gen.api.PlantApi;
 import de.planty.gen.model.GenPlant;
 import de.planty.gen.model.GenPlantPayload;
 import de.planty.hibernate.entity.EntityPlant;
+import de.planty.hibernate.entity.EntityPlantType;
+import de.planty.hibernate.entity.EntityRoom;
+import de.planty.hibernate.entity.EntitySensor;
 import de.planty.hibernate.mapper.PlantEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
 
@@ -36,11 +39,12 @@ public class PlantApiImpl implements PlantApi {
         }
 
         EntityPlant entityPlant = EntityPlant.findById(id);
-        if(entityPlant == null)
+        if (entityPlant == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No plant found for plantId %s", plantId))
                     .build();
+        }
 
         entityPlant.delete();
         return Response
@@ -60,11 +64,12 @@ public class PlantApiImpl implements PlantApi {
         }
 
         EntityPlant entityPlant = EntityPlant.findById(id);
-        if(entityPlant == null)
+        if (entityPlant == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No plant found for plantId %s", plantId))
                     .build();
+        }
 
         GenPlant genPlant = PlantEntityMapper.getInstance().mapPanacheEntity(entityPlant);
         return Response
@@ -76,6 +81,54 @@ public class PlantApiImpl implements PlantApi {
     @Override
     @Transactional
     public Response plantPost(GenPlantPayload genPlantPayload) {
+        if (genPlantPayload.getName() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("name of a plant must be set.")
+                    .build();
+        }
+        
+        if (genPlantPayload.getPlantTypeId() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("plantTypeId of a plant must be set.")
+                    .build();
+        }
+
+        if (genPlantPayload.getRoomId() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("roomId of a plant must be set.")
+                    .build();
+        }
+
+        if (genPlantPayload.getSensorId() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("sensorId of a plant must be set.")
+                    .build();
+        }
+
+        EntityRoom entityRoom = EntityRoom.findById(genPlantPayload.getRoomId());
+        if (entityRoom == null) {
+            return new ErrorResponseBuilder()
+                    .setStatusCode(404)
+                    .setMessage(String.format("No room found for roomId %d", genPlantPayload.getRoomId()))
+                    .build();
+        }
+
+        EntityPlantType entityPlantType = EntityPlantType.findById(genPlantPayload.getPlantTypeId());
+        if (entityPlantType == null) {
+            return new ErrorResponseBuilder()
+                    .setStatusCode(404)
+                    .setMessage(String.format("No plantType found for plantTypeId %d", genPlantPayload.getPlantTypeId()))
+                    .build();
+        }
+
+        EntitySensor entitySensor = EntitySensor.findById(genPlantPayload.getSensorId());
+        if (entitySensor == null) {
+            return new ErrorResponseBuilder()
+                    .setStatusCode(404)
+                    .setMessage(String.format("No sensor found for sensorId %d", genPlantPayload.getSensorId()))
+                    .build();
+        }
+
         EntityPlant entityPlant = PlantEntityMapper.getInstance().mapPayload(genPlantPayload);
         entityPlant.persist();
         return Response

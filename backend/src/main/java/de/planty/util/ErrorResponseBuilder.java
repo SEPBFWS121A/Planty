@@ -16,11 +16,11 @@ public class ErrorResponseBuilder {
     }
 
     public ErrorResponseBuilder(String message){
-        this(message, RestResponse.StatusCode.INTERNAL_SERVER_ERROR);
+        this(message, RestResponse.StatusCode.BAD_REQUEST);
     }
 
     public ErrorResponseBuilder(){
-        this("No further information provided", RestResponse.StatusCode.INTERNAL_SERVER_ERROR);
+        this("No further information provided", RestResponse.StatusCode.BAD_REQUEST);
     }
 
     public ErrorResponseBuilder setMessage(String message) {

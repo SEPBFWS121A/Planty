@@ -26,6 +26,18 @@ public class RoomApiImpl implements RoomApi {
     @Override
     @Transactional
     public Response roomPost(GenRoomPayload genRoomPayload) {
+        if (genRoomPayload.getName() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("name of room must be set.")
+                    .build();
+        }
+        
+        if(genRoomPayload.getDescription() == null) {
+            return new ErrorResponseBuilder()
+                    .setMessage("description of room must be set.")
+                    .build();
+        }
+
         EntityRoom entityRoom = RoomEntityMapper.getInstance().mapPayload(genRoomPayload);
         entityRoom.persist();
         return Response
@@ -45,11 +57,12 @@ public class RoomApiImpl implements RoomApi {
         }
 
         EntityRoom entityRoom = EntityRoom.findById(id);
-        if(entityRoom == null)
+        if (entityRoom == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No room found for roomId %s", roomId))
                     .build();
+        }
 
         entityRoom.delete();
         return Response
@@ -69,11 +82,12 @@ public class RoomApiImpl implements RoomApi {
         }
 
         EntityRoom entityRoom = EntityRoom.findById(id);
-        if(entityRoom == null)
+        if (entityRoom == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
                     .setMessage(String.format("No room found for roomId %s", roomId))
                     .build();
+        }
 
         GenRoom genRoom = RoomEntityMapper.getInstance().mapPanacheEntity(entityRoom);
         return Response
