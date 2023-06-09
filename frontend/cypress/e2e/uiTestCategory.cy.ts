@@ -34,8 +34,11 @@ describe('UI Test Category', () => {
 
             cy.get('button').contains('Add Category').click();
 
-            // Find the button within the last <td> element
-            cy.get('td.mat-cell.cdk-column-delete button.mat-button').click();
+        // Find the button within the last <td> element
+        cy.contains('table td', 'Category Name')
+            .siblings('td')
+            .contains('Delete')
+            .click();
         });
     });
 });
