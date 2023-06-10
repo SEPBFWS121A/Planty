@@ -42,7 +42,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "autoprefixer": "^10.4.12",
-    "cypress": "^12.12.0",
+    "cypress": "^12.14.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
