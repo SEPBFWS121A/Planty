@@ -1,6 +1,6 @@
 import { forEach } from 'cypress/types/lodash';
 describe('UI Test Category', () => {
-    before(() => {
+    beforeEach(() => {
         cy.visit('http://localhost:4200/category');
     });
 
@@ -27,6 +27,21 @@ describe('UI Test Category', () => {
     });
 
     describe('Check UI-Elements functionality', () => {
+        it('Check maxlength = 40 on Name field and maxlength = 100 on description ', () => {
+            cy.get('input[placeholder="Name"]').type('Lorem ipsum dolor sit amet, consectetuer adip');
+
+            cy.get('input[placeholder="Description"]').type('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.');
+
+            cy.get('input[placeholder="Min Humidity Level"]', ).type('100');
+
+            //Click submit button
+            cy.get('button').contains('Add Category').click();
+
+            //Verify the added category
+            cy.contains('table td', 'Lorem ipsum dolor sit amet, consectetuer adip').should('exist');
+            cy.contains('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa').should('exist');
+        });
+
         it('fill out form, submits and deletes the category', () => {
             cy.get('input[placeholder="Name"]').type('Category Name');
             cy.get('input[placeholder="Description"]').type('Category Description');
@@ -39,6 +54,14 @@ describe('UI Test Category', () => {
             .siblings('td')
             .contains('Delete')
             .click();
+        });
+
+        //Delete an existing category that is not longer needed
+        it('delete an existing category', () => {
+            cy.contains('table td', 'Lorem ipsum dolor sit amet, consectetuer adip')
+                .siblings('td')
+                .contains('Delete')
+                .click();
         });
     });
 });
