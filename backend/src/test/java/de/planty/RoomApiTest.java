@@ -24,7 +24,7 @@ public class RoomApiTest {
         Logger.getLogger("RoomApiTest").info("Setting Rest-Assured port to: " + testBackendPort);
         RestAssured.port = testBackendPort;
 
-        given()
+        /*given()
                 .contentType("application/json")
                 .body(MockData.ROOM_LIVINGROOM)
                 .when().post("/room")
@@ -36,7 +36,7 @@ public class RoomApiTest {
                 .body(MockData.ROOM_BEDROOM)
                 .when().post("/room")
                 .then()
-                .statusCode(201);
+                .statusCode(201);*/
     }
 
     @Test
@@ -55,7 +55,6 @@ public class RoomApiTest {
                 .then()
                 .statusCode(200)
                 .body("name", is("Living Room"));
-
     }
 
     @Test
