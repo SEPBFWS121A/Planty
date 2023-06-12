@@ -1,16 +1,19 @@
 package de.planty.api;
 
+import java.net.URI;
+import java.util.List;
+
+import javax.transaction.Transactional;
+import javax.ws.rs.core.Response;
+
 import de.planty.gen.api.RoomApi;
 import de.planty.gen.model.GenRoom;
 import de.planty.gen.model.GenRoomPayload;
 import de.planty.hibernate.entity.EntityRoom;
 import de.planty.hibernate.mapper.RoomEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
+import de.planty.util.StringUtil;
 
-import javax.transaction.Transactional;
-import javax.ws.rs.core.Response;
-import java.net.URI;
-import java.util.List;
 
 public class RoomApiImpl implements RoomApi {
 
@@ -26,13 +29,13 @@ public class RoomApiImpl implements RoomApi {
     @Override
     @Transactional
     public Response roomPost(GenRoomPayload genRoomPayload) {
-        if (genRoomPayload.getName() == null) {
+        if (StringUtil.isNullOrEmpty(genRoomPayload.getName())) {
             return new ErrorResponseBuilder()
                     .setMessage("name of room must be set.")
                     .build();
         }
         
-        if(genRoomPayload.getDescription() == null) {
+        if(StringUtil.isNullOrEmpty(genRoomPayload.getDescription())) {
             return new ErrorResponseBuilder()
                     .setMessage("description of room must be set.")
                     .build();

@@ -6,6 +6,7 @@ import de.planty.gen.model.GenPlantTypePayload;
 import de.planty.hibernate.entity.EntityPlantType;
 import de.planty.hibernate.mapper.PlantTypeEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
+import de.planty.util.StringUtil;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.core.Response;
@@ -79,13 +80,13 @@ public class PlantTypeApiImpl implements PlantTypeApi {
     @Override
     @Transactional
     public Response plantTypePost(GenPlantTypePayload genPlantTypePayload) {
-        if (genPlantTypePayload.getName() == null) {
+        if (StringUtil.isNullOrEmpty(genPlantTypePayload.getName())) {
             return new ErrorResponseBuilder()
                     .setMessage("name of a plant type must be set.")
                     .build();
         }
 
-        if (genPlantTypePayload.getDescription() == null) {
+        if (StringUtil.isNullOrEmpty(genPlantTypePayload.getDescription())) {
             return new ErrorResponseBuilder()
                     .setMessage("description of a plant type must be set.")
                     .build();
