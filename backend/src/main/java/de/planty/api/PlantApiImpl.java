@@ -9,6 +9,7 @@ import de.planty.hibernate.entity.EntityRoom;
 import de.planty.hibernate.entity.EntitySensor;
 import de.planty.hibernate.mapper.PlantEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
+import de.planty.util.StringUtil;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.core.Response;
@@ -81,9 +82,15 @@ public class PlantApiImpl implements PlantApi {
     @Override
     @Transactional
     public Response plantPost(GenPlantPayload genPlantPayload) {
-        if (genPlantPayload.getName() == null) {
+        if (StringUtil.isNullOrEmpty(genPlantPayload.getName())) {
             return new ErrorResponseBuilder()
                     .setMessage("name of a plant must be set.")
+                    .build();
+        }
+
+        if(StringUtil.isNullOrEmpty(genPlantPayload.getDescription())){
+            return new ErrorResponseBuilder()
+                    .setMessage("description of a plant must be set.")
                     .build();
         }
         
@@ -93,11 +100,14 @@ public class PlantApiImpl implements PlantApi {
                     .build();
         }
 
+        // roomId is considered obsolete
+        /*
         if (genPlantPayload.getRoomId() == null) {
             return new ErrorResponseBuilder()
                     .setMessage("roomId of a plant must be set.")
                     .build();
         }
+        */
 
         if (genPlantPayload.getSensorId() == null) {
             return new ErrorResponseBuilder()

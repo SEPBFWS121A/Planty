@@ -7,6 +7,7 @@ import de.planty.gen.model.GenSensorPayload;
 import de.planty.hibernate.entity.EntitySensor;
 import de.planty.hibernate.mapper.SensorEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
+import de.planty.util.StringUtil;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.core.Response;
@@ -45,19 +46,19 @@ public class SensorApiImpl implements SensorApi {
     @Override
     @Transactional
     public Response sensorPost(GenSensorPayload genSensorPayload) {
-        if (genSensorPayload.getName() == null) {
+        if (StringUtil.isNullOrEmpty(genSensorPayload.getName())) {
             return new ErrorResponseBuilder()
                     .setMessage("name of a sensor must be set.")
                     .build();
         }
 
-        if (genSensorPayload.getDescription() == null) {
+        if (StringUtil.isNullOrEmpty(genSensorPayload.getDescription())) {
             return new ErrorResponseBuilder()
                     .setMessage("description of a sensor must be set.")
                     .build();
         }
 
-        if (genSensorPayload.getHardwareId() == null) {
+        if (StringUtil.isNullOrEmpty(genSensorPayload.getHardwareId())) {
             return new ErrorResponseBuilder()
                     .setMessage("hardwareId of a sensor must be set.")
                     .build();
@@ -111,7 +112,7 @@ public class SensorApiImpl implements SensorApi {
         if(entitySensor == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
-                    .setMessage(String.format("No sensor found for plantId %s", sensorId))
+                    .setMessage(String.format("No sensor found for sensorId %s", sensorId))
                     .build();
         }
 
@@ -156,7 +157,7 @@ public class SensorApiImpl implements SensorApi {
         if (entitySensor == null) {
             return new ErrorResponseBuilder()
                     .setStatusCode(404)
-                    .setMessage(String.format("No sensor found for plantId %s", sensorId))
+                    .setMessage(String.format("No sensor found for sensorId %s", sensorId))
                     .build();
         }
 
