@@ -11,8 +11,10 @@ public class MockData {
 
     //Mock data for Sensor
     public static final String SENSOR_1 = "{\"hardwareId\": \"1\", \"name\": \"Humidity\", \"description\": \"The best sensor.\", \"humidityScalingFrom\": 0, \"humidityScalingTo\": 100, \"lastCalibration\": \"2019-01-01T00:00:00.000Z\", \"sleepTimeout\": 1000}";
+    public static final String SENSOR_2 = "{\"hardwareId\": \"2\", \"name\": \"Temperature\", \"description\": \"The best sensor.\", \"humidityScalingFrom\": 0, \"humidityScalingTo\": 100, \"lastCalibration\": \"2019-01-01T00:00:00.000Z\", \"sleepTimeout\": 1000}";
+    public static final String SENSOR_2_UPDATE = "{\"humidityScalingFrom\": 0, \"humidityScalingTo\": 90, \"sleepTimeout\": 1000}";
 
     //Mock data for Plant
-    public static final String PLANT_BASIL = "{\"name\": \"Basil\", \"description\": \"The best plant.\", \"plantTypeId\": 1, \"sensorId\": 1, \"roomId\": 1}";
+    public static final String PLANT_BASIL = "{\"name\": \"Basil\", \"description\": \"The best plant.\", \"plantTypeId\": 1, \"sensorId\": 3, \"roomId\": 1}";
     public static final String PLANT_MINT = "{\"name\": \"Mint\", \"description\": \"The sleepy plant.\", \"plantTypeId\": 1, \"sensorId\": 1, \"roomId\": 2}"; 
 }
