@@ -4,6 +4,11 @@ import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
 import org.eclipse.microprofile.config.ConfigProvider;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.MethodOrderer;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
@@ -14,6 +19,7 @@ import static org.hamcrest.Matchers.is;
 
 @QuarkusTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class RoomApiTest {
 
     @BeforeAll
@@ -40,6 +46,7 @@ public class RoomApiTest {
     }
 
     @Test
+    @Order(1)
     public void testRoomGetAll() {
         given()
                 .when().get("/room")
@@ -49,6 +56,7 @@ public class RoomApiTest {
     }
 
     @Test
+    @Order(2)
     public void testRoomGetLivingRoom() {
         given()
                 .when().get("/room/1")
@@ -58,6 +66,7 @@ public class RoomApiTest {
     }
 
     @Test
+    @Order(3)
     public void testRoomGetBedroom() {
         given()
                 .when().get("/room/2")
@@ -66,7 +75,7 @@ public class RoomApiTest {
                 .body("name", is("Bedroom"));
     }
 
-    /*@AfterAll
+    @AfterAll
     public static void cleanup() {
         Logger.getLogger("RoomApiTest").info("Cleaning up test data");
 
@@ -79,5 +88,5 @@ public class RoomApiTest {
                 .when().delete("/room/2")
                 .then()
                 .statusCode(204);
-    }*/
+    }
 }
