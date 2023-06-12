@@ -49,6 +49,7 @@ public class RoomApiImpl implements RoomApi {
     }
 
     @Override
+    @Transactional
     public Response roomRoomIdDelete(String roomId) {
         int id;
         try {

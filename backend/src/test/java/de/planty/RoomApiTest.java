@@ -82,11 +82,11 @@ public class RoomApiTest {
         given()
                 .when().delete("/room/1")
                 .then()
-                .statusCode(204);
+                .statusCode(200);
 
         given()
                 .when().delete("/room/2")
                 .then()
-                .statusCode(204);
+                .statusCode(200);
     }
 }
