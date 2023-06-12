@@ -2,8 +2,8 @@ package de.planty.hibernate.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
-import javax.persistence.*;
-import javax.validation.Valid;
+import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import java.util.Date;
 
 @Entity
