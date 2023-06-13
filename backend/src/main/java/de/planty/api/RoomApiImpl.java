@@ -3,8 +3,8 @@ package de.planty.api;
 import java.net.URI;
 import java.util.List;
 
-import javax.transaction.Transactional;
-import javax.ws.rs.core.Response;
+import jakarta.transaction.Transactional;
+import jakarta.ws.rs.core.Response;
 
 import de.planty.gen.api.RoomApi;
 import de.planty.gen.model.GenRoom;

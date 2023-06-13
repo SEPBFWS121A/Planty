@@ -1,13 +1,8 @@
 package de.planty;
 
-import de.planty.hibernate.entity.EntityRoom;
-import io.quarkus.logging.Log;
 import io.quarkus.test.junit.QuarkusTest;
-import io.quarkus.test.junit.callback.QuarkusTestBeforeClassCallback;
-
-import io.quarkus.test.junit.callback.QuarkusTestBeforeEachCallback;
-import io.quarkus.test.junit.callback.QuarkusTestBeforeTestExecutionCallback;
-import io.quarkus.test.junit.callback.QuarkusTestMethodContext;
+import io.restassured.RestAssured;
+import org.eclipse.microprofile.config.ConfigProvider;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -15,7 +10,7 @@ import org.junit.jupiter.api.TestInstance;
 import java.util.logging.Logger;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.is;
 
 @QuarkusTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -25,6 +20,9 @@ public class RoomApiTest {
     public static void setup() {
         Logger.getLogger("RoomApiTest").info("Preparing test data");
 
+        int testBackendPort = ConfigProvider.getConfig().getValue("quarkus.http.test-port", Integer.class);
+        Logger.getLogger("RoomApiTest").info("Setting Rest-Assured port to: " + testBackendPort);
+        RestAssured.port = testBackendPort;
 
         given()
                 .contentType("application/json")

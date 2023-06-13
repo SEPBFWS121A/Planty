@@ -8,8 +8,8 @@ import de.planty.hibernate.mapper.PlantTypeEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
 import de.planty.util.StringUtil;
 
-import javax.transaction.Transactional;
-import javax.ws.rs.core.Response;
+import jakarta.transaction.Transactional;
+import jakarta.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
 

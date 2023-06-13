@@ -8,8 +8,8 @@ import de.planty.hibernate.entity.EntityPlant;
 import de.planty.hibernate.mapper.MoistureRecordEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
 
-import javax.transaction.Transactional;
-import javax.ws.rs.core.Response;
+import jakarta.transaction.Transactional;
+import jakarta.ws.rs.core.Response;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
