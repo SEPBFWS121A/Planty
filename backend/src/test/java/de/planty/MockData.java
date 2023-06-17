@@ -17,4 +17,7 @@ public class MockData {
     //Mock data for Plant
     public static final String PLANT_BASIL = "{\"name\": \"Basil\", \"description\": \"The best plant.\", \"plantTypeId\": 1, \"sensorId\": 3, \"roomId\": 1}";
     public static final String PLANT_MINT = "{\"name\": \"Mint\", \"description\": \"The sleepy plant.\", \"plantTypeId\": 1, \"sensorId\": 1, \"roomId\": 2}"; 
+
+    public static final String MOISTURE_RECORD1 = "{\"timestamp\": \"2012-01-31 23:59:59\", \"humidity_level\": \"12\", \"plant_id\": 8}"; 
+    public static final String MOISTURE_RECORD2 = "{\"timestamp\": \"2014-04-31 23:59:59\", \"humidity_level\": \"15\", \"plant_id\": 8}"; 
 }
