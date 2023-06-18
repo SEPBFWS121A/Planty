@@ -1,7 +1,9 @@
-import { forEach } from 'cypress/types/lodash';
+import { before } from 'mocha';
+
 describe('UI Test Category', () => {
   beforeEach(() => {
     cy.visit('http://localhost:4200/category');
+    cy.viewport('iphone-x');
   });
 
   describe('Check UI-Elements', () => {
@@ -42,10 +44,9 @@ describe('UI Test Category', () => {
       cy.get('button').contains('Add Category').click();
 
       //Verify the added category
-      cy.contains(
-        'table td',
-        'Lorem ipsum dolor sit amet, consectetuer adip'
-      ).should('exist');
+      cy.get('button')
+        .contains(' Lorem ipsum dolor sit amet, consectetuer adip ')
+        .should('exist');
     });
 
     it('fill out form, submits and deletes the category', () => {
