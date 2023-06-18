@@ -36,34 +36,34 @@ public class PlantEntityMapperTest {
 
     @Test
     public void testPlantEntityMapperGenEntityToPanacheEntity() {
-        GenRoom genRoomPayload = new GenRoom();
-        genRoomPayload.setName("Tannenbaum");
-        genRoomPayload.setDescription("Ab dem 1.1. wird es Peilich...");
-        genRoomPayload.setPlantTypeId(24);
-        genRoomPayload.setSensorId(12);
-        genRoomPayload.setRoomId(23);
+        GenPlant genPlantPayload = new GenPlant();
+        genPlantPayload.setName("Tannenbaum");
+        genPlantPayload.setDescription("Ab dem 1.1. wird es Peilich...");
+        genPlantPayload.setPlantTypeId(24);
+        genPlantPayload.setSensorId(12);
+        genPlantPayload.setRoomId(23);
 
 
-        EntityRoom entityRoom = RoomEntityMapper.getInstance().mapGenEntity(genRoomPayload);
+        EntityPlant entityPlant = PlantEntityMapper.getInstance().mapGenEntity(genPlantPayload);
 
-        assertTrue(entityRoom.getId() == 0);
-        assertTrue(entityRoom.getName().equals("Tannenbaum");
-        assertTrue(entityRoom.getDescription().equals("Ab dem 1.1. wird es Peilich...");
-        assertTrue(entityRoom.getPlantTypeId() == 24);
-        assertTrue(entityRoom.getSensorId() == 12);
-        assertTrue(entityRoom.getRoomId() == 23);
+        assertTrue(entityPlant.getId() == 0);
+        assertTrue(entityPlant.getName().equals("Tannenbaum");
+        assertTrue(entityPlant.getDescription().equals("Ab dem 1.1. wird es Peilich...");
+        assertTrue(entityPlant.getPlantTypeId() == 24);
+        assertTrue(entityPlant.getSensorId() == 12);
+        assertTrue(entityPlant.getRoomId() == 23);
     }
 
     @Test
-    public void testRoomEntityMapperPayloadToPanacheEntity() {
+    public void testPlantEntityMapperPayloadToPanacheEntity() {
         GenPlantPayload genPlantPayload = new GenPlantPayload();
         genPlantPayload.setName("Tannenbaum");
         genPlantPayload.setDescription("Ab dem 1.1. wird es Peilich...");
 
         EntityPlant entityPlant = PlantEntityMapper.getInstance().mapPayload(genPlantPayload);
 
-        assertTrue(entityRoom.getName().equals("Tannenbaum"));
-        assertTrue(entityRoom.getDescription().equals("Ab dem 1.1. wird es Peilich..."));
+        assertTrue(entityPlant.getName().equals("Tannenbaum"));
+        assertTrue(entityPlant.getDescription().equals("Ab dem 1.1. wird es Peilich..."));
     }
 
 }
