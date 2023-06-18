@@ -1,10 +1,10 @@
 package de.planty.hibernate.mapper;
 
+import java.util.Date;
+
 import de.planty.gen.model.GenSensor;
 import de.planty.gen.model.GenSensorPayload;
 import de.planty.hibernate.entity.EntitySensor;
-
-import java.util.Date;
 
 public class SensorEntityMapper extends EntityMapperBase<EntitySensor, GenSensor, GenSensorPayload> {
 
@@ -27,6 +27,7 @@ public class SensorEntityMapper extends EntityMapperBase<EntitySensor, GenSensor
     @Override
     public EntitySensor mapGenEntity(GenSensor genEntity) {
         EntitySensor entitySensor = new EntitySensor();
+        entitySensor.setId(genEntity.getId());
         entitySensor.setHardwareId(genEntity.getHardwareId());
         entitySensor.setName(genEntity.getName());
         entitySensor.setDescription(genEntity.getDescription());
@@ -51,7 +52,7 @@ public class SensorEntityMapper extends EntityMapperBase<EntitySensor, GenSensor
     }
 
     public static SensorEntityMapper getInstance() {
-        if(sensorEntityMapper == null)
+        if (sensorEntityMapper == null)
             sensorEntityMapper = new SensorEntityMapper();
         return sensorEntityMapper;
     }

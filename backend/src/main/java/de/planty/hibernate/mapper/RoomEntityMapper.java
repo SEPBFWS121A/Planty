@@ -20,6 +20,7 @@ public class RoomEntityMapper extends EntityMapperBase<EntityRoom, GenRoom, GenR
     @Override
     public EntityRoom mapGenEntity(GenRoom genEntity) {
         EntityRoom entityRoom = new EntityRoom();
+        entityRoom.setId(genEntity.getId());
         entityRoom.setName(genEntity.getName());
         entityRoom.setDescription(genEntity.getDescription());
         return entityRoom;
@@ -34,7 +35,7 @@ public class RoomEntityMapper extends EntityMapperBase<EntityRoom, GenRoom, GenR
     }
 
     public static RoomEntityMapper getInstance() {
-        if(roomEntityMapper == null)
+        if (roomEntityMapper == null)
             roomEntityMapper = new RoomEntityMapper();
         return roomEntityMapper;
     }
