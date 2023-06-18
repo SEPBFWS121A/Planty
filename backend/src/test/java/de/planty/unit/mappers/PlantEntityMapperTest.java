@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
-import de.planty.gen.model.GenRoom;
-import de.planty.gen.model.GenRoomPayload;
-import de.planty.hibernate.entity.EntityRoom;
-import de.planty.hibernate.mapper.RoomEntityMapper;
+import de.planty.gen.model.GenPlant;
+import de.planty.gen.model.GenPlantPayload;
+import de.planty.hibernate.entity.EntityPlant;
+import de.planty.hibernate.mapper.PlantEntityMapper;
 import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
