@@ -1,20 +1,19 @@
 package de.planty.api;
 
+import java.net.URI;
+import java.util.List;
+
 import de.planty.gen.api.PlantApi;
 import de.planty.gen.model.GenPlant;
 import de.planty.gen.model.GenPlantPayload;
 import de.planty.hibernate.entity.EntityPlant;
 import de.planty.hibernate.entity.EntityPlantType;
-import de.planty.hibernate.entity.EntityRoom;
 import de.planty.hibernate.entity.EntitySensor;
 import de.planty.hibernate.mapper.PlantEntityMapper;
 import de.planty.util.ErrorResponseBuilder;
 import de.planty.util.StringUtil;
-
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.core.Response;
-import java.net.URI;
-import java.util.List;
 
 public class PlantApiImpl implements PlantApi {
 
@@ -115,6 +114,8 @@ public class PlantApiImpl implements PlantApi {
                     .build();
         }
 
+        // roomId is considered obsolete
+        /*
         EntityRoom entityRoom = EntityRoom.findById(genPlantPayload.getRoomId());
         if (entityRoom == null) {
             return new ErrorResponseBuilder()
@@ -122,7 +123,8 @@ public class PlantApiImpl implements PlantApi {
                     .setMessage(String.format("No room found for roomId %d", genPlantPayload.getRoomId()))
                     .build();
         }
-
+        */
+        
         EntityPlantType entityPlantType = EntityPlantType.findById(genPlantPayload.getPlantTypeId());
         if (entityPlantType == null) {
             return new ErrorResponseBuilder()

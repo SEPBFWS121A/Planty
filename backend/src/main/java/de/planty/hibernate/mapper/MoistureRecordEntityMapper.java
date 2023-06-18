@@ -4,9 +4,8 @@ import de.planty.gen.model.GenMoistureRecord;
 import de.planty.gen.model.GenMoistureRecordPayload;
 import de.planty.hibernate.entity.EntityMoistureRecord;
 
-import java.util.Date;
-
-public class MoistureRecordEntityMapper extends EntityMapperBase<EntityMoistureRecord, GenMoistureRecord, GenMoistureRecordPayload> {
+public class MoistureRecordEntityMapper
+        extends EntityMapperBase<EntityMoistureRecord, GenMoistureRecord, GenMoistureRecordPayload> {
 
     private static MoistureRecordEntityMapper moistureRecordEntityMapper;
 
@@ -23,6 +22,7 @@ public class MoistureRecordEntityMapper extends EntityMapperBase<EntityMoistureR
     @Override
     public EntityMoistureRecord mapGenEntity(GenMoistureRecord genEntity) {
         EntityMoistureRecord entityMoistureRecord = new EntityMoistureRecord();
+        entityMoistureRecord.setId(genEntity.getId());
         entityMoistureRecord.setTimestamp(genEntity.getTimestamp());
         entityMoistureRecord.setHumidityLevel(genEntity.getHumidityLevel());
         entityMoistureRecord.setPlantId(genEntity.getPlantId());
@@ -38,8 +38,8 @@ public class MoistureRecordEntityMapper extends EntityMapperBase<EntityMoistureR
         return entityMoistureRecord;
     }
 
-    public static MoistureRecordEntityMapper getInstance(){
-        if(moistureRecordEntityMapper == null)
+    public static MoistureRecordEntityMapper getInstance() {
+        if (moistureRecordEntityMapper == null)
             moistureRecordEntityMapper = new MoistureRecordEntityMapper();
         return moistureRecordEntityMapper;
     }

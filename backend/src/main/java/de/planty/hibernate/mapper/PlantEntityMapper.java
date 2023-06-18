@@ -23,6 +23,7 @@ public class PlantEntityMapper extends EntityMapperBase<EntityPlant, GenPlant, G
     @Override
     public EntityPlant mapGenEntity(GenPlant genEntity) {
         EntityPlant entityPlant = new EntityPlant();
+        entityPlant.setId(genEntity.getId());
         entityPlant.setName(genEntity.getName());
         entityPlant.setDescription(genEntity.getDescription());
         entityPlant.setPlantTypeId(genEntity.getPlantTypeId());
@@ -43,7 +44,7 @@ public class PlantEntityMapper extends EntityMapperBase<EntityPlant, GenPlant, G
     }
 
     public static PlantEntityMapper getInstance() {
-        if(plantEntityMapper == null)
+        if (plantEntityMapper == null)
             plantEntityMapper = new PlantEntityMapper();
         return plantEntityMapper;
     }
