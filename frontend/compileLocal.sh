@@ -12,7 +12,7 @@ fi
 docker build -t planty-frontend-dev -f dockerfile.dev .
 
 # Run yarn install inside container
-docker run -it --rm --name planty-frontend-compiler -v "$WD":/app planty-frontend yarn install
+docker run -it --rm --name planty-frontend-compiler -v "$WD":/app planty-frontend-dev yarn install
 
 # Run frontend inside container
-docker run -it --rm --name planty-frontend-compiler -v "$WD":/app planty-frontend ng build
+docker run -it --rm --name planty-frontend-compiler -v "$WD":/app planty-frontend-dev ng build
