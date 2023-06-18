@@ -8,6 +8,7 @@ public class MockData {
 
     //Mock data for PlantType
     public static final String PLANTTYPE_HERB = "{\"name\": \"Herb\", \"description\": \"The best plant type.\", \"minHumidityLevel\": 0}";
+    public static final String PLANTTYPE_CACTUS = "{\"name\": \"Cactus\", \"description\": \"The sleepy plant type.\", \"minHumidityLevel\": 0}";
 
     //Mock data for Sensor
     public static final String SENSOR_1 = "{\"hardwareId\": \"1\", \"name\": \"Humidity\", \"description\": \"The best sensor.\", \"humidityScalingFrom\": 0, \"humidityScalingTo\": 100, \"lastCalibration\": \"2019-01-01T00:00:00.000Z\", \"sleepTimeout\": 1000}";
