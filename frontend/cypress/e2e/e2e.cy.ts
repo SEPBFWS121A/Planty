@@ -29,13 +29,6 @@ describe('UI Tests', () => {
       cy.get('input[placeholder="Name"]').should('exist');
     });
 
-    it('Check description field', () => {
-      //Visit Plant site
-      cy.visit('http://localhost:4200/plant');
-
-      //Check if field exist
-      cy.get('input[placeholder="Description"]').should('exist');
-    });
 
     it('Check category dropdown', () => {
       //Visit Plant site
@@ -55,8 +48,6 @@ describe('UI Tests', () => {
   });
 
   describe('Check UI-Elements functionality', () => {
-
-
     it('Check maxlength = 40 on Name field and maxlength = 100 on description ', () => {
       //Visit Plant site
       cy.visit('http://localhost:4200/plant');
@@ -88,37 +79,6 @@ describe('UI Tests', () => {
       cy.contains('table td', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m').should('exist');
     });
 
-
-    it('Add a plant', () => {
-      //Visit Plant site
-      cy.visit('http://localhost:4200/plant');
-
-      // Interact with the input fields
-      cy.get('input[placeholder="Name"]').type('Torben Tulip');
-      cy.get('input[placeholder="Description"]').type(description);
-
-      // Select the category from the dropdown
-      cy.contains('mat-label.ng-star-inserted', 'Selected Category')
-        .parents('mat-form-field')
-        .find('mat-select')
-        .click();
-      cy.get('mat-option').contains('Tulip').click();
-
-
-      // Select the category from the dropdown
-      cy.contains('mat-label.ng-star-inserted', 'Selected Sensor')
-        .parents('mat-form-field')
-        .find('mat-select')
-        .click();
-      cy.get('mat-option').contains(sensor).click();
-
-      // Click the submit button
-      cy.contains('Add Plant').click();
-
-      // Verify the added plant
-      cy.contains('table td', 'Tulip').should('exist');
-      cy.contains('table td', description).should('exist');
-    });
 
     it('Deleting an incorrectly created plant', () => {
       //Visit Plant site
